@@ -1,0 +1,12 @@
+# Site settings
+name: Noah Rogers
+title: Noah Rogers
+description: A travel project
+highlighter: pygments
+
+# Build settings
+markdown: kramdown
+
+# Sass settings
+sass:
+  sass_dir: assets/stylesheets
