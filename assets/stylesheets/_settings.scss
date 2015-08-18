@@ -1,19 +1,33 @@
 // Font Weights
+$light: 300;
 $regular: 400;
 $bold: 700;
 
 // Body Font
-$body-font: $regular 110%/1.5 "Open Sans", sans-serif;
+$body-font: $regular 100%/1.5 "Open Sans", sans-serif;
 
 // Header Font
-$header-font: $bold 110%/1.25 "Open Sans", sans-serif;
+$header-font: $light 100%/1.5 "Open Sans", serif;
 
 // Colors
-$black: #000;
+$primary: #395667;
+$primary-dark: #334d5c;
+$accent: #eab378;
+
+$black: #555;
+$light-gray: #f3f3f3;
 $white: #fff;
+$gray: #777;
+
+// Border
+$border-light: #eee;
+
+// Border radius
+$border-radius: 3px;
+$circle: 50%;
 
 // Medium Screens
-$medium: "(min-width: 600px)";
+$medium: "(min-width: 800px)";
 
 // Medium Screens
 $large: "(min-width: 1000px)";
