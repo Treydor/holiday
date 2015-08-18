@@ -2,6 +2,7 @@
 name: Noah Rogers
 title: Noah Rogers
 description: A travel project
+baseurl: "/holiday"
 highlighter: pygments
 
 # Build settings
