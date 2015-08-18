@@ -9,12 +9,11 @@
   text-decoration: none;
 }
 
-/*------ Card photo ------*/
+/*------ Card header ------*/
 
-.card__photo {
-  height: 225px;
-
-  @media #{$medium} { height: 200px; }
+.card__header {
+  background-size: cover;
+  height: 200px;
 }
 
 /*------ Card body ------*/
@@ -41,4 +40,51 @@
 .card__rating {
   color: $accent;
   float: right;
+}
+
+/*------ Card photos ------*/
+
+.new-york {
+  background: url("../../assets/images/cards/newyork.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.san-fran {
+  background: url("../../assets/images/cards/sanfran.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.chicago {
+  background: url("../../assets/images/cards/chicago.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.aruba {
+  background: url("../../assets/images/cards/aruba.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.st-thomas {
+  background: url("../../assets/images/cards/stthomas.jpg") center  no-repeat;
+  background-size: cover;
+}
+
+.nassau {
+  background: url("../../assets/images/cards/nassau.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.london {
+  background: url("../../assets/images/cards/london.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.paris {
+  background: url("../../assets/images/cards/paris.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.berlin {
+  background: url("../../assets/images/cards/berlin.jpg") center no-repeat;
+  background-size: cover;
 }

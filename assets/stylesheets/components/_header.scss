@@ -28,7 +28,7 @@ header .container {
   @include clean-list;
   display: none;
 
-  @media #{$medium} { display: inline-block; }
+  @media #{$large} { display: inline-block; }
 }
 
 .navigation__item {
@@ -77,7 +77,7 @@ header .container {
 .mobile-bar {
   background: $primary-dark;
 
-  @media #{$medium} { display: none; }
+  @media #{$large} { display: none; }
 }
 
 .mobile-bar .container {
