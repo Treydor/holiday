@@ -1,0 +1,23 @@
+/*------ Forms ------*/
+
+.textfield {
+  background: $white;
+  border: none;
+  border-radius: $border-radius;
+  color: $gray;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding: .8rem 1rem;;
+  width: 100%;
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
+/*------ Form Icons ------*/
+
+.location {
+  background: $white url("/assets/images/location.svg") 1rem no-repeat;
+  background-size: 22px;
+  margin-bottom: 0;
+  padding-left: 2.6rem;
+}
