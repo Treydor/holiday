@@ -12,10 +12,12 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+   @media #{$medium} { font-size: 110%; }
 }
 
 body {
-  background: $white;
+  background: $light-gray;
   color: $black;
 }
 
@@ -24,4 +26,14 @@ body {
 img {
   display: block;
   width: 100%;
+}
+
+/*------ Container ------*/
+
+.container {
+  @extend %clearfix;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 3rem 0;
+  width: 90%;
 }
