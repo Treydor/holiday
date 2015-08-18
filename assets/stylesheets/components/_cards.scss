@@ -1,0 +1,45 @@
+/*------ Card ------*/
+
+.card {
+  background: $white;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+
+  &:hover {
+    position: relative;
+    top: 1px;
+  }
+}
+
+/*------ Card photo ------*/
+
+.card__photo { height: 200px; }
+
+/*------ Card body ------*/
+
+.card__body { padding: 1.2rem; }
+
+.card__location {
+  @include ellipsis;
+  display: block;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/*------ Card footer ------*/
+
+.card__footer {
+  @extend %clearfix;
+  border-top: 1px solid $border-light;
+  padding: .7rem 1rem;
+}
+
+.card__price { float: left; }
+
+.card__rating {
+  color: $accent;
+  float: right;
+}
