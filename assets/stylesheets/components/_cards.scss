@@ -11,7 +11,11 @@
 
 /*------ Card photo ------*/
 
-.card__photo { height: 200px; }
+.card__photo {
+  height: 225px;
+
+  @media #{$medium} { height: 200px; }
+}
 
 /*------ Card body ------*/
 
