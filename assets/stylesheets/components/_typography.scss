@@ -21,10 +21,11 @@ p {
   &:last-of-type { margin: 0; }
 }
 
-ul { margin: 0 0 1.5rem; }
-
-strong { font-weight: $bold; }
 em { font-style: italic; }
+
+/*------ List ------*/
+
+ul { margin: 0 0 1.5rem; }
 
 /*------ Links ------*/
 
@@ -32,3 +33,7 @@ a {
   color: inherit;
   text-decoration: underline;
 }
+
+/*------ Section title ------*/
+
+.section__title { margin-bottom: 1.5rem; }
