@@ -1,0 +1,94 @@
+/*------ Header ------*/
+
+header { background: $primary; }
+
+header .container {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 80px;
+  max-width: 1600px;
+  padding: 0;
+}
+
+/*------ Logo ------*/
+
+.logo {
+  color: $white;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: $bold;
+  text-decoration: none;
+}
+
+/*------ Desktop Navigation ------*/
+
+.navigation {
+  @include clean-list;
+  display: none;
+
+  @media #{$medium} { display: inline-block; }
+}
+
+.navigation__item {
+  display: inline-block;
+  margin-left: 1.2rem;
+
+  &:first-of-type { margin-left: 2.4rem; }
+}
+
+.navigation__link {
+  color: $white;
+  text-decoration: none;
+
+  &:hover, .navigation__link--current { text-decoration: underline; }
+}
+
+/*------ Admin Navigation ------*/
+
+.navigation--admin {
+  -webkit-align-items: center;
+  -webkit-flex: auto;
+  -webkit-justify-content: flex-end;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: auto;
+  justify-content: flex-end;
+}
+
+/*------ User Account ------*/
+
+.user-account {
+  background: $white url("/assets/images/user.svg") 50% 4px no-repeat;
+  background-size: cover;
+  border-radius: $circle;
+  display: block;
+  float: right;
+  height: 1.75em;
+  overflow: hidden;
+  text-align: center;
+  width: 1.75rem;
+}
+
+/*------ Mobile Navigation ------*/
+
+.mobile-bar {
+  background: $primary-dark;
+
+  @media #{$medium} { display: none; }
+}
+
+.mobile-bar .container {
+  height: 60px;
+  padding: 0;
+}
+
+.navigation--mobile { display: block; }
+
+.navigation__item--mobile {
+  margin-left: 1.6rem;
+
+  &:first-of-type { margin-left: 0; }
+}
