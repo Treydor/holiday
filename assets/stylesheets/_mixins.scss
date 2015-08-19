@@ -1,5 +1,21 @@
 /*------ Mixins ------*/
 
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin prefix-property($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin transition($arguments) {
+  @include prefix-property(transition, $arguments);
+}
+
 @mixin ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
