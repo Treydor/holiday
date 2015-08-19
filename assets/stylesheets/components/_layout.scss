@@ -37,3 +37,16 @@ img {
   padding: 3rem 0;
   width: 90%;
 }
+
+/*------ Section ------*/
+
+.section__header {
+  @extend %clearfix;
+  margin-bottom: 1.5rem;
+}
+
+.section__title {
+  display: block;
+  float: left;
+  margin: 0;
+}
