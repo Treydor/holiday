@@ -21,9 +21,10 @@
   border-radius: $border-radius;
   border: 1px solid $border-light;
   color: $gray;
-  float: right;
   overflow: hidden;
-  width: auto;
+  width: 200px;
+
+  @media #{$medium} { float: right; }
 }
 
 .sort {
