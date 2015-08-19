@@ -1,176 +1,191 @@
 ---
 layout: default
-title: Holiday Travel
+title: Holiday
 ---
 <div class="hero main">
   <div class="container">
-    <h1 class="hero__title">Ready to get away?</h1>
+    <h1 class="hero__title">Find your dream vacation</h1>
     <form>
-      <input class="textfield location" type="text" name="destination" placeholder="Search City Name or Airport Code">
+      <input type="text" class="input hero__search" placeholder="Search City Name or Airport Code">
     </form>
   </div>
 </div>
 
 <section>
   <div class="container">
-    <h2 class="section__title">Popular Destinations</h2>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header new-york"></div>
-        <div class="card__body">
-          <span class="card__location">New York City, New York</span>
+    <div class="section__header">
+      <h2 class="section__title">Destinations</h2>
+      <form>
+        <div class="styled-select">
+          <select class="sort">
+            <option value="popularity">Popularity</option>
+            <option value="price-low">Price (Lowest First)</option>
+            <option value="price-high">Price (Highest First)</option>
+            <option value="rating">Guest Rating</option>
+            <option value="alpha">Alphabetical (A-Z)</option>
+          </select>
         </div>
-        <div class="card__footer">
-          <span class="card__price">$1299+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </span>
-        </div>
-      </a>
+      </form>
     </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header san-fran"></div>
-        <div class="card__body">
-          <span class="card__location">San Francisco, California</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$1549+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header chicago"></div>
-        <div class="card__body">
-          <span class="card__location">Chicago, Illinois</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$1349+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header aruba"></div>
-        <div class="card__body">
-          <span class="card__location">Oranjestad, Aruba</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$1999+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header st-thomas"></div>
-        <div class="card__body">
-          <span class="card__location">Saint Thomas, USVI</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$1849+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header nassau"></div>
-        <div class="card__body">
-          <span class="card__location">Nassau, Bahamas</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$1749+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header london"></div>
-        <div class="card__body">
-          <span class="card__location">London, England</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$2349+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header paris"></div>
-        <div class="card__body">
-          <span class="card__location">Paris, France</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$2219+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </span>
-        </div>
-      </a>
-    </div>
-    <div class="column">
-      <a class="card" href="">
-        <div class="card__header berlin"></div>
-        <div class="card__body">
-          <span class="card__location">Berlin, Germany</span>
-        </div>
-        <div class="card__footer">
-          <span class="card__price">$2349+</span>
-          <span class="card__rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </span>
-        </div>
-      </a>
+    <div class="card-container">
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header new-york"></div>
+          <div class="card__body">
+            <span class="card__location">New York City, New York</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$1299+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header san-fran"></div>
+          <div class="card__body">
+            <span class="card__location">San Francisco, California</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$1549+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header chicago"></div>
+          <div class="card__body">
+            <span class="card__location">Chicago, Illinois</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$1349+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header aruba"></div>
+          <div class="card__body">
+            <span class="card__location">Oranjestad, Aruba</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$1999+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header st-thomas"></div>
+          <div class="card__body">
+            <span class="card__location">Saint Thomas, USVI</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$1849+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header nassau"></div>
+          <div class="card__body">
+            <span class="card__location">Nassau, Bahamas</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$1749+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header london"></div>
+          <div class="card__body">
+            <span class="card__location">London, England</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$2349+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header paris"></div>
+          <div class="card__body">
+            <span class="card__location">Paris, France</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$2219+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a class="card" href="">
+          <div class="card__header berlin"></div>
+          <div class="card__body">
+            <span class="card__location">Berlin, Germany</span>
+          </div>
+          <div class="card__footer">
+            <span class="card__price">$2349+</span>
+            <span class="card__rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
