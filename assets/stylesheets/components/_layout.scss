@@ -28,7 +28,7 @@ img {
   width: 100%;
 }
 
-/*------ Container ------*/
+/*------ Containers ------*/
 
 .container {
   @extend %clearfix;
@@ -37,6 +37,8 @@ img {
   padding: 3rem 0;
   width: 90%;
 }
+
+.wrapper { @extend %clearfix; }
 
 /*------ Section ------*/
 
