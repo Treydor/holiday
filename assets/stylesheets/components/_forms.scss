@@ -1,23 +1,47 @@
 /*------ Forms ------*/
 
-.textfield {
+.input {
   background: $white;
   border: 1px solid $border-light;
   border-radius: $border-radius;
   color: $gray;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   outline: none;
-  padding: .8rem 1rem;;
+  padding: .6rem 1rem;
   width: 100%;
-
-  &:last-of-type { margin-bottom: 0; }
 }
 
-/*------ Form Icons ------*/
+/*------ Styled select ------*/
 
-.location {
-  background: $white url("../../assets/images/location.svg") 1rem no-repeat;
-  background-size: 22px;
-  margin-bottom: 0;
-  padding-left: 2.6rem;
+.styled-select {
+  background: $white url("../../assets/images/down-arrow.svg") 95% 50% no-repeat;
+  background-size: 18px;
+  border-radius: $border-radius;
+  border: 1px solid $border-light;
+  color: $gray;
+  float: right;
+  overflow: hidden;
+  width: auto;
+}
+
+.sort {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
+  font-size: .9rem;
+  outline: 0;
+  padding: .5rem 1rem;
+  width: 200px;
+}
+
+/*------ Hero search ------*/
+
+.hero__search {
+  background: $white url("../../assets/images/location.svg") .8rem 60% no-repeat;
+  background-size: 30px;
+  font-size: 1.1rem;
+  padding: .8rem 1rem;
+  padding-left: 3.2rem;
 }
