@@ -5,9 +5,10 @@
   align-items: center;
   display: -webkit-flex;
   display: flex;
-  height: 400px;
+  height: 420px;
 
-  @media #{$medium} { height: 450px; }
+  @media #{$medium} { height: 460px; }
+  @media #{$large} { height: 500px; }
 }
 
 .hero .container { max-width: 660px; }
