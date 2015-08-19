@@ -9,14 +9,10 @@
   text-decoration: none;
 }
 
-/*------ Card header ------*/
-
 .card__header {
   background-size: cover;
   height: 200px;
 }
-
-/*------ Card body ------*/
 
 .card__body { padding: 1rem; }
 
@@ -26,8 +22,6 @@
   font-size: 1.1rem;
   text-align: center;
 }
-
-/*------ Card footer ------*/
 
 .card__footer {
   @extend %clearfix;
