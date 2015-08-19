@@ -9,6 +9,8 @@
   outline: none;
   padding: .6rem 1rem;
   width: 100%;
+
+  &:last-of-type { margin-bottom: 0; }
 }
 
 /*------ Styled select ------*/
