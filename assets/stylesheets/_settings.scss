@@ -12,18 +12,22 @@ $header-font: $light 100%/1.5 "Open Sans", serif;
 // Colors
 $primary: #395667;
 $primary-dark: #334d5c;
-$accent: #eab378;
+$accent: #3cab86;
 $black: #555;
 $light-gray: #eee;
 $white: #fff;
-$gray: #777;
+$gray: #999;
 
-// Border
+// Border Color
 $border-light: #ddd;
 
-// Border radius
+// Border Radius
 $border-radius: 3px;
 $circle: 50%;
+
+// Animations
+$duration: .2s;
+$timing: ease-in-out;
 
 // Medium Screens
 $medium: "(min-width: 600px)";
