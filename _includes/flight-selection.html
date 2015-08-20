@@ -1,62 +1,60 @@
-<div class="flight-select__table">
-  <form>
+<form class="flight-select">
 
-    <div class="row row--hero">
-      <div class="column column--hero column--hero__half">
-        <label class="flight-select__label">Flying from</label>
-        <input type="text" class="input flight-select__location" placeholder="City Name or Airport Code">
-      </div>
-      <div class="column column--hero column--hero__half">
-        <label class="flight-select__label">Flying to</label>
-        <input type="text" class="input flight-select__location" placeholder="City Name or Airport Code">
-      </div>
+  <div class="row row__formgroup">
+    <div class="column column--formgroup column--formgroup__half">
+      <label class="flight-select__label">Flying from</label>
+      <input type="text" class="input flight-select__location" placeholder="City Name or Airport Code">
     </div>
+    <div class="column column--formgroup column--formgroup__half">
+      <label class="flight-select__label">Flying to</label>
+      <input type="text" class="input flight-select__location" placeholder="City Name or Airport Code">
+    </div>
+  </div>
 
-    <div class="row row--hero">
-      <div class="column column--hero">
-        <label class="flight-select__label">Depart</label>
-        <input type="text" class="input flight-select__date" placeholder="mm/dd/yyyy">
-      </div>
-      <div class="column column--hero">
-        <label class="flight-select__label">Return</label>
-        <input type="text" class="input flight-select__date" placeholder="mm/dd/yyyy">
-      </div>
-      <div class="column column--hero">
-        <label class="flight-select__label">Passengers</label>
-        <div class="select-style">
-          <select class="select__list">
-            <option>2</option>
-            <option>1</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-          </select>
-        </div>
+  <div class="row row--formgroup">
+    <div class="column column--formgroup">
+      <label class="flight-select__label">Depart</label>
+      <input type="text" class="input flight-select__date" placeholder="mm/dd/yyyy">
+    </div>
+    <div class="column column--formgroup">
+      <label class="flight-select__label">Return</label>
+      <input type="text" class="input flight-select__date" placeholder="mm/dd/yyyy">
+    </div>
+    <div class="column column--formgroup">
+      <label class="flight-select__label">Passengers</label>
+      <div class="select-style">
+        <select class="select__list">
+          <option>2</option>
+          <option>1</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
       </div>
     </div>
+  </div>
 
-    <div class="row row--hero">
-      <label class="flight-select__label flight-select__label--link">
-        <input type="radio" name="type" class="flight-select__option">
-        <span>Round Trip</span>
-      </label>
-      <label class="flight-select__label flight-select__label--link">
-        <input type="radio" name="type" class="flight-select__option">
-        <span>One Way</span>
-      </label>
-    </div>
+  <div class="row row--formgroup">
+    <label class="flight-select__label flight-select__label--link">
+      <input type="radio" name="type" class="flight-select__option" checked="checked">
+      <span>Round Trip</span>
+    </label>
+    <label class="flight-select__label flight-select__label--link">
+      <input type="radio" name="type" class="flight-select__option">
+      <span>One Way</span>
+    </label>
+  </div>
 
-    <div class="row row--hero">
-      <label class="flight-select__label flight-select__label--link">
-        <input type="checkbox" class="flight-select__option">
-        <span>Nonstop Flights Only</span>
-      </label>
-    </div>
+  <div class="row row--formgroup">
+    <label class="flight-select__label flight-select__label--link">
+      <input type="checkbox" class="flight-select__option">
+      <span>Nonstop Flights Only</span>
+    </label>
+  </div>
 
-    <div class="row row--hero">
-      <button class="input flight-select__button">Search</button>
-    </div>
+  <div class="row row--formgroup">
+    <button class="input flight-select__button">Search</button>
+  </div>
 
-  </form>
-</div>
+</form>
