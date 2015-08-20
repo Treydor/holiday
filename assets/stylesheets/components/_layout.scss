@@ -44,12 +44,11 @@ img {
 
 .section__header {
   @extend %clearfix;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
-.section__title {
-
-  @media #{$medium} {
+@media #{$large} {
+  .section__title {
     float: left;
     margin: 0;
   }
