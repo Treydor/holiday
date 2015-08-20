@@ -2,48 +2,65 @@
 
 .input {
   background: $white;
-  border: 1px solid $border-light;
+  border: 0;
   border-radius: $border-radius;
-  color: $gray;
+  color: $black;
+  font-size: .9rem;
   margin-bottom: 1rem;
   outline: none;
-  padding: .6rem 1rem;
+  padding: .8rem 1rem;
   width: 100%;
 
   &:last-of-type { margin-bottom: 0; }
 }
 
-/*------ Styled select ------*/
-
-.styled-select {
-  background: $white url("../../assets/images/down-arrow.svg") 95% 50% no-repeat;
-  background-size: 18px;
-  border-radius: $border-radius;
-  border: 1px solid $border-light;
+.input::-moz-placeholder {
   color: $gray;
-  overflow: hidden;
-  width: 200px;
-
-  @media #{$medium} { float: right; }
+  opacity:  1;
 }
 
-.sort {
+.input:-moz-placeholder {
+  color: $gray;
+  opacity:  1;
+}
+
+.input:-ms-input-placeholder { color: $gray; }
+.input::-webkit-input-placeholder { color: $gray; }
+
+/*------ Select  ------*/
+
+.select-style {
+  background: $white url("../../assets/images/down-arrow.svg") 95% 50% no-repeat;
+  background-size: 12px;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  @media #{$medium} {
+    background: $white url("../../assets/images/down-arrow.svg") 90% 50% no-repeat;
+    background-size: 12px;
+  }
+}
+
+.select__list {
+  -moz-appearance: none;
   -webkit-appearance: none;
   background: transparent;
-  border-radius: 0;
   border: 0;
+  color: $black;
   cursor: pointer;
   font-size: .9rem;
   outline: 0;
-  padding: .5rem 1rem;
-  width: 200px;
+  padding: .743rem 1rem;
+  width: 100%;
 }
 
-/*------ Hero search ------*/
+.select__section-sort {
+  border: 1px solid $border-light;
+  width: 100%;
 
-.hero__search {
-  background: $white url("../../assets/images/location.svg") .8rem 60% no-repeat;
-  background-size: 30px;
-  padding: .8rem 1rem;
-  padding-left: 3.2rem;
+  @media #{$medium} {
+    max-width: 200px;
+  }
+
+  @media #{$large} { float: right; }
 }
