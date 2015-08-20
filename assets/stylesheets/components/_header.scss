@@ -18,7 +18,8 @@ header .container {
   color: $white;
   font-size: 1.4rem;
   font-weight: $bold;
-  text-decoration: none;
+
+  &:hover { text-decoration: none; }
 }
 
 /*------ Desktop Navigation ------*/
@@ -37,12 +38,7 @@ header .container {
   &:first-of-type { margin-left: 2.4rem; }
 }
 
-.navigation__link {
-  color: $white;
-  text-decoration: none;
-
-  &:hover { text-decoration: underline; }
-}
+.navigation__link { color: $white; }
 
 .navigation__link--current {
   font-weight: $bold;
