@@ -1,12 +1,15 @@
-/*------ Hero ------*/
+/*------ Hero Table ------*/
 
-.hero__title {
-  color: $white;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.hero__table {
+  @include background-opacity($primary, 0.8);
+  border-radius: $border-radius;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1.8rem;
+  width: 100%;
 }
 
-/*------ Hero types ------*/
+/*------ Hero Types ------*/
 
 .flights {
   background: url("../../assets/images/hero/airplane-view.jpg") no-repeat;
