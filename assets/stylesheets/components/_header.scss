@@ -41,7 +41,13 @@ header .container {
   color: $white;
   text-decoration: none;
 
-  &:hover, .navigation__link--current { text-decoration: underline; }
+  &:hover { text-decoration: underline; }
+}
+
+.navigation__link--current {
+  font-weight: $bold;
+
+  &:hover { text-decoration: none; }
 }
 
 /*------ Admin Navigation ------*/
@@ -80,7 +86,7 @@ header .container {
 }
 
 .mobile-bar .container {
-  height: 60px;
+  height: 64px;
   padding: 0;
 }
 
