@@ -47,9 +47,18 @@ img {
   margin-bottom: 1.8rem;
 }
 
-@media #{$large} {
-  .section__title {
+.section__title {
+  margin-bottom: 1.4rem;
+  text-align: center;
+
+  @media #{$medium} {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  @media #{$large} {
     float: left;
+    font-size: 2rem;
     margin: 0;
   }
 }
