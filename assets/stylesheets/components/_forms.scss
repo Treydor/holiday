@@ -49,10 +49,12 @@
   color: $black;
   cursor: pointer;
   font-size: .9rem;
-  height: 50.1563px;
+  height: 44.5938px;
   outline: 0;
   padding: 0 1rem;
   width: 100%;
+
+  @media #{$medium} { height: 50.1563px; }
 }
 
 .select__section-sort {
