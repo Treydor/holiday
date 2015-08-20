@@ -2,12 +2,9 @@
 layout: default
 title: Holiday
 ---
-<div class="hero main">
+<div class="hero flights">
   <div class="container">
-    <h1 class="hero__title">Find your dream vacation</h1>
-    <form>
-      <input type="text" class="input hero__search" placeholder="Search City Name or Airport Code">
-    </form>
+    {% include flight-selection.html %}
   </div>
 </div>
 
@@ -16,8 +13,8 @@ title: Holiday
     <div class="section__header">
       <h2 class="section__title">Featured Destinations</h2>
       <form>
-        <div class="styled-select">
-          <select class="sort">
+        <div class="select-style select__section-sort">
+          <select class="select__list">
             <option value="popularity">Popularity</option>
             <option value="price-low">Price (Lowest First)</option>
             <option value="price-high">Price (Highest First)</option>
@@ -27,6 +24,6 @@ title: Holiday
         </div>
       </form>
     </div>
-    {% include featured.html %}
+    {% include featured-destinations.html %}
   </div>
 </section>
