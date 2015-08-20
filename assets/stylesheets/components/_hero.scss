@@ -1,18 +1,5 @@
 /*------ Hero ------*/
 
-.hero {
-  -webkit-align-items: center;
-  align-items: center;
-  display: -webkit-flex;
-  display: flex;
-  height: 420px;
-
-  @media #{$medium} { height: 460px; }
-  @media #{$large} { height: 500px; }
-}
-
-.hero .container { max-width: 660px; }
-
 .hero__title {
   color: $white;
   margin-bottom: 1.5rem;
@@ -21,7 +8,7 @@
 
 /*------ Hero types ------*/
 
-.main {
+.flights {
   background: url("../../assets/images/hero/airplane-view.jpg") no-repeat;
   background-position: 50%;
   background-size: cover;
