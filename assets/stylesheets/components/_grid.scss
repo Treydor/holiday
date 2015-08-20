@@ -30,15 +30,15 @@
   }
 }
 
-/*------ Hero Grid ------*/
+/*------ Formgroup ------*/
 
-.row--hero {
+.row--formgroup {
   margin-bottom: 1rem;
 
   @media #{$medium} { margin-bottom: 1.2rem; }
 }
 
-.column--hero {
+.column--formgroup {
   margin-bottom: 1rem;
 
   @media #{$medium} {
@@ -50,7 +50,7 @@
   }
 }
 
-.column--hero__half {
+.column--formgroup__half {
   @media #{$medium} {
     margin-bottom: 0;
     width: 48%;
