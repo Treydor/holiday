@@ -1,18 +1,30 @@
 /*------ Card ------*/
 
 .card {
+  @include transition (border $duration $timing);
   background: $white;
   border: 1px solid $border-light;
   border-radius: $border-radius;
   display: block;
   overflow: hidden;
 
-  &:hover { text-decoration: none; }
+  &:hover {
+    border: 1px solid darken($border-light, 5%);
+    text-decoration: none;
+  }
+
+  &:hover .card__overlay { background: none; }
 }
 
 .card__header {
   background-size: cover;
   height: 200px;
+}
+
+.card__overlay {
+  @include transition (background $duration $timing);
+  background: rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
 .card__body { padding: 1rem; }
@@ -27,21 +39,37 @@
 .card__footer {
   @extend %clearfix;
   border-top: 1px solid $border-light;
-  font-size: .9rem;
   padding: .7rem 1rem;
 }
 
 .card__price { float: left; }
+
+.card__price--sale {
+  color: $accent;
+  font-weight: $bold;
+}
 
 .card__rating {
   color: $accent;
   float: right;
 }
 
+/*------ Labels ------*/
+
+.card__special {
+  background: rgba(60, 171, 134, 0.9);
+  color: $white;
+  font-size: .9rem;
+  font-weight: $bold;
+  padding: .5rem 1rem;
+  position: absolute;
+  text-transform: uppercase;
+}
+
 /*------ Card photos ------*/
 
 .new-york {
-  background: url("../../assets/images/cards/newyork.jpg") center no-repeat;
+  background: url("../../assets/images/cards/newyork.jpg") 50% 0 no-repeat;
   background-size: cover;
 }
 
