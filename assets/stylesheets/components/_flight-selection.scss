@@ -1,25 +1,78 @@
+/*------ Flight select table ------*/
+
+.flight-table {
+  border-radius: $border-radius;
+  color: $white;
+  margin: 0 auto;
+  max-width: 700px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.flight-table__header {
+  @include background-opacity($primary, 0.9);
+  overflow: hidden;
+  width: 100%;
+}
+
+.flight-table__body {
+  @include background-opacity($primary, 0.8);
+  padding: 1.6rem;
+}
+
+/*------ Flight Type ------*/
+
+.flight-type {
+  @extend %clearfix;
+  @include clean-list;
+}
+
+.flight-type__item {
+  float: left;
+  width: 50%;
+
+  @media #{$medium} { width: 130px; }
+}
+
+.flight-type__link {
+  @include transition (background $duration $timing);
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.flight-type__link:hover, .flight-type__link--current {
+  @include background-opacity($primary, 0.6);
+  text-decoration: none;
+
+  &:hover { text-decoration: none; }
+}
+
 /*------ Label ------*/
 
-.flight-select__label {
-  color: $white;
+.flight__label {
   display: inline-block;
   font-size: .9rem;
   font-weight: $bold;
   margin-bottom: .5rem;
+  text-transform: uppercase;
 }
 
-.flight-select__label--link {
+.flight__label--link {
   cursor: pointer;
+  font-size: 1rem;
   font-weight: $regular;
   margin-bottom: 0;
   margin-right: 1rem;
+  text-transform: none;
 
   &:last-of-type { margin-right: 0; }
 }
 
 /*------ Location ------*/
 
-.flight-select__location {
+.flight__location {
   background: $white url("../../assets/images/location.svg") 1rem 50% no-repeat;
   background-size: 12px;
   padding-left: 2.6rem;
@@ -27,25 +80,24 @@
 
 /*------ Date ------*/
 
-.flight-select__date {
+.flight__date {
   background: $white url("../../assets/images/calender.svg") 1rem 50% no-repeat;
   background-size: 15px;
   padding-left: 2.6rem;
 }
 
-/*------  Checkbox and Radio ------*/
+/*------  Checkbox ------*/
 
-.flight-select__option { margin-right: .3rem; }
+.flight__option { margin-right: .3rem; }
 
 /*------ Button ------*/
 
-.flight-select__button {
+.flight__button {
   @include transition (background $duration $timing);
   background: $accent;
   color: $white;
   font-size: 1rem;
   font-weight: $bold;
-  margin-top: .5rem;
 
   &:hover { background: darken($accent, 5%); }
 }
