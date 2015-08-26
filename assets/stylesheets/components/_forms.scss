@@ -39,14 +39,21 @@ input, label {
 /*------ Select  ------*/
 
 .select-style {
-  background: $white url("../../assets/images/down-arrow.svg") 95% 50% no-repeat;
-  background-size: 12px;
+  background: $white;
   border-radius: $border-radius;
+  height: 44.5938px;
   overflow: hidden;
+  position: relative;
 
-  @media #{$medium} {
-    background: $white url("../../assets/images/down-arrow.svg") 90% 50% no-repeat;
-    background-size: 12px;
+  &:after {
+    @include vertical-align;
+    content: "\f107";
+    color: $gray;
+    font-family: "FontAwesome";
+    font-size: 1.2rem;
+    line-height: normal;
+    right: 1rem;
+    z-index: 1;
   }
 }
 
@@ -58,21 +65,24 @@ input, label {
   color: $black;
   cursor: pointer;
   font-size: .9rem;
-  height: 41.0313px;
+  height: 100%;
   outline: 0;
   padding: 0 1rem;
+  position: relative;
   width: 100%;
+  z-index: 2;
+}
 
-  @media #{$medium} { height: 44.5938px; }
+.select__list:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 .select__section-sort {
   border: 1px solid $border-light;
   width: 100%;
 
-  @media #{$medium} {
-    max-width: 200px;
-  }
+  @media #{$medium} { max-width: 220px; }
 
   @media #{$large} { float: right; }
 }
