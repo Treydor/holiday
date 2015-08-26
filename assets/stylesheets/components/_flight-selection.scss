@@ -10,8 +10,7 @@
 }
 
 .flight-table__header {
-  @include background-opacity($primary, 0.9);
-  overflow: hidden;
+  @include background-opacity($primary, 0.8);
   width: 100%;
 }
 
@@ -30,8 +29,11 @@
 .flight-type__item {
   float: left;
   width: 50%;
+}
 
-  @media #{$medium} { width: 130px; }
+.flight-type__item:last-of-type {
+  @include background-opacity($primary, 0.6);
+  color: $medium-gray;
 }
 
 .flight-type__link {
@@ -40,11 +42,6 @@
   padding: 1rem 0;
   text-align: center;
   width: 100%;
-}
-
-.flight-type__link:hover, .flight-type__link--current {
-  @include background-opacity($primary, 0.6);
-  text-decoration: none;
 
   &:hover { text-decoration: none; }
 }
