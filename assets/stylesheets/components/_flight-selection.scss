@@ -1,6 +1,7 @@
 /*------ Flight select table ------*/
 
 .flight-table {
+  background: $primary;
   border-radius: $border-radius;
   color: $white;
   margin: 0 auto;
@@ -9,15 +10,7 @@
   width: 100%;
 }
 
-.flight-table__header {
-  @include background-opacity($primary, 0.8);
-  width: 100%;
-}
-
-.flight-table__body {
-  @include background-opacity($primary, 0.8);
-  padding: 1.6rem;
-}
+.flight-table__body { padding: 1.6rem; }
 
 /*------ Flight Type ------*/
 
@@ -32,18 +25,21 @@
 }
 
 .flight-type__item:last-of-type {
-  @include background-opacity($primary, 0.6);
-  color: $medium-gray;
+  background: $primary-dark;
+  color: $primary-light;
 }
 
 .flight-type__link {
-  @include transition (background $duration $timing);
+  @include transition (color $duration $timing);
   display: block;
-  padding: 1rem 0;
+  padding: .8rem 0;
   text-align: center;
   width: 100%;
 
-  &:hover { text-decoration: none; }
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 /*------ Label ------*/
@@ -71,7 +67,7 @@
 
 .flight__location {
   background: $white url("../../assets/images/location.svg") 1rem 50% no-repeat;
-  background-size: 12px;
+  background-size: 11px;
   padding-left: 2.6rem;
 }
 
@@ -79,7 +75,7 @@
 
 .flight__date {
   background: $white url("../../assets/images/calender.svg") 1rem 50% no-repeat;
-  background-size: 15px;
+  background-size: 14px;
   padding-left: 2.6rem;
 }
 
