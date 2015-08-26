@@ -1,15 +1,15 @@
 /*------ Footer ------*/
 
 footer {
-  @extend %clearfix;
   background: $primary-dark;
   color: $white;
+  font-size: .9rem;
 
-  @media #{$medium} { text-align: center; }
+  a { text-decoration: underline; }
 }
 
 .footer-section {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.5rem;
 
   &:last-of-type { margin-bottom: 0; }
 }
@@ -18,30 +18,25 @@ footer {
 
 .footer-title {
   color: $white;
-  margin-bottom: .6rem;
-
-  @media #{$medium} { display: none; }
+  font-size: .9rem;
+  margin-bottom: .7rem;
 }
 
 /*------ Footer Lists ------*/
 
 .footer-menu, .social-menu { @include clean-list; }
 
-.footer-menu__item {
-  cursor: pointer;
+.footer-menu__link, .social-menu__link {
+  text-decoration: none;
 
-  @media #{$medium} {
-    display: inline-block;
-    margin-left: 1rem;
-  }
-
-  &:first-of-type { margin-left: 0; }
+  &:hover { text-decoration: none; }
 }
 
 .social-menu__item {
   display: inline-block;
-  font-size: 1.4rem;
-  margin-left: 1.2rem;
+  margin-left: 1.5rem;
 
   &:first-of-type { margin-left: 0; }
 }
+
+.social-menu__icon { font-size: 1.4rem; }
