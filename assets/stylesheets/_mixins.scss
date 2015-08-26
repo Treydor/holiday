@@ -1,10 +1,5 @@
 /*------ Mixins ------*/
 
-@mixin background-opacity($color, $opacity: 0.3) {
-  background: $color;
-  background: rgba($color, $opacity);
-}
-
 @mixin prefix-property($property, $value) {
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
@@ -16,14 +11,22 @@
   @include prefix-property(transition, $arguments);
 }
 
+@mixin clean-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 @mixin ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-@mixin clean-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
