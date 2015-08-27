@@ -1,34 +1,28 @@
 <div class="flight-table">
   <form class="flight">
-
     <div class="flight-table__header">
-
       <div class="row formgroup__row">
         <ul class="flight-type">
-          <li class="flight-type__item">
+          <li class="flight-type__tab flight-type__tab--current">
             <a href="" class="flight-type__link">Round Trip </a>
           </li>
-          <li class="flight-type__item">
+          <li class="flight-type__tab">
             <a href="" class="flight-type__link">One Way</a>
           </li>
         </ul>
       </div>
-
     </div>
     <div class="flight-table__body">
-
       <div class="row formgroup__row">
         <div class="column formgroup__column formgroup__column--medium">
           <label class="flight__label">Flying from</label>
           <input type="text" class="input flight__location" placeholder="City Name or Airport Code">
         </div>
-
         <div class="column formgroup__column formgroup__column--medium">
           <label class="flight__label">Flying to</label>
           <input type="text" class="input flight__location" placeholder="City Name or Airport Code">
         </div>
       </div>
-
       <div class="row formgroup__row">
         <div class="column formgroup__column">
           <label class="flight__label">Depart</label>
@@ -52,23 +46,19 @@
           </div>
         </div>
       </div>
-
       <div class="row formgroup__row">
-        <label class="flight__label flight__label--link">
-          <input type="checkbox" class="flight__option">
+        <label class="flight__option">
+          <input type="checkbox" class="flight__option-checkbox">
           <span>Display Nonstop Flights Only</span>
         </label>
-        <label class="flight__label flight__label--link">
-          <input type="checkbox" checked="checked" class="flight__option flight__option--right">
+        <label class="flight__option">
+          <input type="checkbox" checked="checked" class="flight__option-checkbox">
           <span>Add Trip Insurance</span>
         </label>
       </div>
-
       <div class="row formgroup__row">
-        <button class="input flight__button">Search</button>
+        <button class="input flight__search">Search</button>
       </div>
-
     </div>
-
   </form>
 </div>
