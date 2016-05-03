@@ -3,9 +3,9 @@ name: Noah Rogers
 title: Holiday
 description: A travel project
 baseurl: "/holiday"
-highlighter: pygments
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
 
 # Sass settings
