@@ -1,0 +1,80 @@
+<div class="search-table">
+  <form class="packages" action="/holiday/packages/package-selection/">
+
+    <div class="row">
+      <div class="column column--half">
+        <label>Flying from</label>
+        <input type="text" placeholder="Hotel name or address">
+      </div>
+      <div class="column column--half">
+        <label>Flying to</label>
+        <div class="test">
+          <input type="text" placeholder="Hotel name or address">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column column--half">
+        <div class="column column--half">
+          <label>Departing</label>
+          <input type="date" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="column column--half">
+          <label>Returning</label>
+          <input type="date" placeholder="mm/dd/yyyy">
+        </div>
+      </div>
+      <div class="column column--half">
+        <div class="column column--third--locked">
+          <label>Rooms</label>
+          <div class="select-style">
+            <select class="select__list">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+        </div>
+        <div class="column column--third--locked">
+          <label>Adults</label>
+          <div class="select-style">
+            <select class="select__list">
+              <option>2</option>
+              <option>1</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+        </div>
+        <div class="column column--third--locked">
+          <label>Children</label>
+          <div class="select-style">
+            <select class="select__list">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="label--clickable">
+        <input type="checkbox">Nonstop flights only
+      </label>
+    </div>
+
+    <div class="row">
+      <button class="button button--primary">Search</button>
+    </div>
+
+  </form>
+</div>
