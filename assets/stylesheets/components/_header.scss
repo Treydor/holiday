@@ -14,7 +14,7 @@ header .container {
   float: left;
   font-size: 1.75rem;
   font-weight: $light;
-  margin-right: 3rem;
+  margin-right: 2rem;
 
   &:hover {
     text-decoration: none;
@@ -32,7 +32,7 @@ header .container {
 
 .nav-list__item {
   float: left;
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
 
   &:first-of-type {
     margin-left: 0;
@@ -51,8 +51,9 @@ header .container {
   border: 2px solid $white;
   border-radius: $circle;
   display: block;
-  height: 42px;
-  width: 42px;
+  height: 35px;
+  margin-top: 3px;
+  width: 35px;
 }
 
 /*------ Desktop Navigation ------*/
