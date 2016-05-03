@@ -1,61 +1,46 @@
 /*------ Header ------*/
 
-header { background: $primary; }
-
-header .container {
-  -webkit-align-items: center;
-  align-items: center;
-  display: -webkit-flex;
-  display: flex;
-  height: 80px;
-  padding: 0;
+header {
+  background: $dark-blue;
 }
 
-/*------ Logo ------*/
+header .container {
+  padding: 1rem 0;
+}
 
 .logo {
   color: $white;
-  font-size: 1.6rem;
-  font-weight: $light;
-
-  &:hover { text-decoration: none; }
-}
-
-/*------ Desktop Navigation ------*/
-
-.navigation {
-  @include clean-list;
-  display: none;
-
-  @media #{$large} { display: inline-block; }
-}
-
-.navigation__item {
   display: inline-block;
-  margin-left: 1.2rem;
+  float: left;
+  font-size: 1.75rem;
+  font-weight: $light;
+  margin-right: 3rem;
 
-  &:first-of-type { margin-left: 2.4rem; }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.navigation__link { color: $white; }
+/*------ Navigation List ------*/
 
-.navigation__link--current {
-  font-weight: $bold;
-
-  &:hover { text-decoration: none; }
+.nav-list {
+  @extend %clearfix;
+  @include clean-list;
+  float: left;
+  line-height: 42px;
 }
 
-/*------ Admin Navigation ------*/
+.nav-list__item {
+  float: left;
+  margin-left: 1.5rem;
 
-.navigation--admin {
-  -webkit-align-items: center;
-  -webkit-flex: auto;
-  -webkit-justify-content: flex-end;
-  align-items: center;
-  display: -webkit-flex;
-  display: flex;
-  flex: auto;
-  justify-content: flex-end;
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  a {
+    color: $white;
+  }
 }
 
 /*------ User Account ------*/
@@ -63,34 +48,39 @@ header .container {
 .user-account {
   background: $white url("../../assets/images/user.svg") 50% 4px no-repeat;
   background-size: cover;
+  border: 2px solid $white;
   border-radius: $circle;
   display: block;
+  height: 42px;
+  width: 42px;
+}
+
+/*------ Desktop Navigation ------*/
+
+.nav--desktop {
+  display: none;
+
+  @media #{$medium} {
+    display: block;
+  }
+}
+
+.nav--float-right {
   float: right;
-  height: 1.8em;
-  overflow: hidden;
-  text-align: center;
-  width: 1.8rem;
 }
 
 /*------ Mobile Navigation ------*/
 
-.mobile-bar {
-  background: $primary-dark;
+.nav--mobile {
+  @extend %clearfix;
+  background: darken($dark-blue, 4%);
+  display: block;
 
-  @media #{$large} { display: none; }
+  @media #{$medium} {
+    display: none;
+  }
 }
 
-.mobile-bar .container {
-  height: 64px;
-  padding: 0;
-}
-
-.navigation--mobile { display: block; }
-
-.navigation__item--mobile {
-  margin-left: .8rem;
-
-  @media #{$medium} { margin-left: 1.2rem; }
-
-  &:first-of-type { margin-left: 0; }
+.nav--mobile .container {
+  padding: .5rem 0;
 }

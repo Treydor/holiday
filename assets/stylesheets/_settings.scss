@@ -7,26 +7,24 @@ $bold: 700;
 $body-font: $regular 100%/1.5 "Open Sans", sans-serif;
 
 // Header Font
-$header-font: $light 100%/1.5 "Open Sans", serif;
+$header-font: $light 100%/1.5 "Open Sans", sans-serif;
 
 // Colors
-$primary: #395667;
-$primary-dark: #334d5c;
-$primary-light: #517b93;
-$accent: #3cab86;
-$black: #555;
-$light-gray: #eee;
-$gray: #999;
-$white: #fff;
+$dark-blue:           #395667;
+$green:               #3cab86;
+$black:               #555;
+$light-gray:          #eee;
+$gray:                #999;
+$white:               #fff;
 
 // Border Color
-$border-light: #ddd;
+$border-light:        #ddd;
 
 // Border Radius
 $border-radius: 3px;
 $circle: 50%;
 
-// Animations
+// Transitions
 $duration: .2s;
 $timing: ease-in-out;
 

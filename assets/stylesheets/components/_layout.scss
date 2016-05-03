@@ -47,11 +47,9 @@ img {
 
 .section__title {
   margin-bottom: 1.4rem;
-  text-align: center;
 
   @media #{$medium} {
     margin-bottom: 1rem;
-    text-align: left;
   }
 
   @media #{$large} {

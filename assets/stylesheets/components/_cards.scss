@@ -1,3 +1,39 @@
+/*------ Card List ------*/
+
+.card-list {
+  @include clean-list;
+}
+
+.card-list__item {
+  margin-bottom: 1.5rem;
+
+  @media #{$medium} {
+    float: left;
+    margin-left: 3%;
+    width: 48.5%;
+
+    &:nth-of-type(2n+1) { margin-left: 0; }
+  }
+
+  @media #{$medium} {
+    float: left;
+    margin-left: 3%;
+    width: 48.5%;
+
+    &:nth-of-type(2n+1) { margin-left: 0; }
+  }
+
+  @media #{$large} {
+    width: 31%;
+
+    &:nth-of-type(2n+1) { margin-left: 3%; }
+    &:nth-of-type(3n+1) { margin-left: 0; }
+    &:nth-of-type(3n+1) { margin-left: 0; }
+  }
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
 /*------ Card ------*/
 
 .card {
@@ -7,6 +43,7 @@
   border-radius: $border-radius;
   display: block;
   overflow: hidden;
+  position: relative;
 
   &:hover {
     border: 1px solid darken($border-light, 5%);
@@ -39,18 +76,18 @@
 .card__footer {
   @extend %clearfix;
   border-top: 1px solid $border-light;
-  padding: .7rem 1rem;
+  padding: .75rem 1rem;
 }
 
 .card__price { float: left; }
 
 .card__price--sale {
-  color: $accent;
+  color: $green;
   font-weight: $bold;
 }
 
 .card__rating {
-  color: $accent;
+  color: $green;
   float: right;
 }
 
@@ -59,8 +96,10 @@
 .card__special {
   background: rgba(60, 171, 134, 0.9);
   color: $white;
+  display: inline-block;
   font-size: .9rem;
   font-weight: $bold;
+  right: 0;
   padding: .5rem 1rem;
   position: absolute;
   text-transform: uppercase;
