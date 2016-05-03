@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Holiday - Flights
+title: Holiday
 ---
 
-<div class="hero flights">
+<section class="hero">
   <div class="container">
-    {% include flight-selection.html %}
+    {% include search/packages.html %}
   </div>
-</div>
+</section>
 
 <section>
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title">Featured Destinations</h2>
+      <h2 class="section__title">Featured packages</h2>
       <form>
         <div class="select-style select__section-sort">
           <select class="select__list">
-            <option value="popularity">Popularity</option>
+            <option value="popularity">Popular</option>
             <option value="price-low">Price (Lowest First)</option>
             <option value="price-high">Price (Highest First)</option>
             <option value="rating">Guest Rating</option>

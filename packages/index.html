@@ -3,21 +3,28 @@ layout: default
 title: Holiday - Packages
 ---
 
-<div class="container">
-  packages
-  <div class="section__header">
-    <h2 class="section__title">Featured packages</h2>
-    <form>
-      <div class="select-style select__section-sort">
-        <select class="select__list">
-          <option value="popularity">Popularity</option>
-          <option value="price-low">Price (Lowest First)</option>
-          <option value="price-high">Price (Highest First)</option>
-          <option value="rating">Guest Rating</option>
-          <option value="alpha">Alphabetical (A-Z)</option>
-        </select>
-      </div>
-    </form>
+<section class="hero">
+  <div class="container">
+    {% include search/packages.html %}
   </div>
-  {% include featured-destinations.html %}
-</div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Featured packages</h2>
+      <form>
+        <div class="select-style select__section-sort">
+          <select class="select__list">
+            <option value="popularity">Popular</option>
+            <option value="price-low">Price (Lowest First)</option>
+            <option value="price-high">Price (Highest First)</option>
+            <option value="rating">Guest Rating</option>
+            <option value="alpha">Alphabetical (A-Z)</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    {% include featured-destinations.html %}
+  </div>
+</section>
