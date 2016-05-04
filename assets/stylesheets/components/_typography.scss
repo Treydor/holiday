@@ -58,3 +58,9 @@ a {
   color: $gray;
   font-size: .75rem;
 }
+
+.total-price {
+  @extend .important;
+  margin: 1rem 0 0;
+  text-align: center;
+}
