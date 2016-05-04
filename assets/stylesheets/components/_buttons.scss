@@ -1,11 +1,29 @@
 /*------ Buttons ------*/
 
-.button--primary {
+.button {
   @include transition (background $duration $timing);
+  border: 0;
+  border-radius: $border-radius;
+  font-size: .9rem;
+  font-weight: $bold;
+  padding: .5rem .5rem .6rem;
+  width: 100%;
+}
+
+.button--primary {
   background: $green;
   color: $white;
-  font-size: 1rem;
-  font-weight: $bold;
 
-  &:hover { background: darken($green, 5%); }
+  &:hover {
+    background: darken($green, 5%);
+  }
+}
+
+.button--secondary {
+  background: $blue;
+  color: $white;
+
+  &:hover {
+    background: darken($blue, 5%);
+  }
 }
