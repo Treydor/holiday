@@ -1,4 +1,4 @@
-/*------ Card List ------*/
+/*------ Card List & Item ------*/
 
 .card-list {
   @include clean-list;
@@ -6,6 +6,10 @@
 
 .card-list__item {
   margin-bottom: 1.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @media #{$medium} {
     float: left;
@@ -30,11 +34,9 @@
     &:nth-of-type(3n+1) { margin-left: 0; }
     &:nth-of-type(3n+1) { margin-left: 0; }
   }
-
-  &:last-of-type { margin-bottom: 0; }
 }
 
-/*------ Card ------*/
+/*------ Small Cards ------*/
 
 .card {
   @include transition (border $duration $timing);
@@ -50,10 +52,12 @@
     text-decoration: none;
   }
 
-  &:hover .card__overlay { background: none; }
+  &:hover .card__overlay {
+    background: none;
+  }
 }
 
-.card__header {
+.card__photo {
   background-size: cover;
   height: 200px;
 }
@@ -64,22 +68,28 @@
   height: 100%;
 }
 
-.card__body { padding: 1rem; }
+.card__body {
+  padding: 1rem;
+}
 
 .card__location {
   @include ellipsis;
   display: block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 .card__footer {
   @extend %clearfix;
   border-top: 1px solid $border-light;
+  font-size: .85rem;
   padding: .75rem 1rem;
 }
 
-.card__price { float: left; }
+.card__price {
+  float: left;
+  font-weight: $bold;
+}
 
 .card__price--sale {
   color: $green;
@@ -91,14 +101,157 @@
   float: right;
 }
 
-/*------ Labels ------*/
+/*------ Large cards ------*/
+
+.card--large {
+  @include transition (border $duration $timing);
+  font-size: .85rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  width: 100%;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.large-card__module {
+
+  @media #{$large} {
+    float: left;
+    text-align: left;
+  }
+}
+
+.large-card__module--photo {
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+
+  @media #{$large} {
+    text-align: center;
+    width: 100%;
+  }
+
+  @media #{$extra-large} {
+    border-right: 1px solid $border-light;
+    height: 190px;
+    margin: 0;
+    width: 25%;
+  }
+}
+
+.large-card__module--small {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+
+  @media #{$large} {
+    width: 50%;
+  }
+
+  @media #{$extra-large} {
+    margin: 0;
+    width: 25%;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.large-card__module--medium {
+  border-bottom: 1px solid $border-light;
+  padding: 1rem;
+  width: 100%;
+
+  @media #{$large} {
+    border-bottom: 0;
+    border-right: 1px solid $border-light;
+    margin: 0;
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.card__header {
+  margin-bottom: .75rem;
+
+  @media #{$medium} {
+    margin-bottom: .55rem
+  }
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: $bold;
+  margin: 0;
+  text-align: center;
+
+  @media #{$large} {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.card__class {
+  @extend %clearfix;
+  @include clean-list;
+  font-size: 1rem;
+  text-align: center;
+
+  @media #{$large} {
+    display: inline-block;
+    text-align: left;
+  }
+
+  li {
+    color: $gray;
+    display: inline-block;
+  }
+
+  .empty {
+    color: darken($light-gray, 5%);
+  }
+}
+
+.card-info {
+  @include clean-list;
+}
+
+.card-info__item {
+  margin-bottom: .5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.card-info__item--landmark:before {
+  content: "\f041";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.card__total {
+  font-size: 1.5rem;
+  font-weight: $bold;
+  margin: 0;
+}
+
+/*------ Card Special Labels ------*/
 
 .card__special {
   background: rgba(60, 171, 134, 0.9);
   color: $white;
   display: inline-block;
-  font-size: .9rem;
+  font-size: .85rem;
   font-weight: $bold;
+  letter-spacing: .5px;
   right: 0;
   padding: .5rem 1rem;
   position: absolute;
