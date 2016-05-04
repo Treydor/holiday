@@ -54,15 +54,6 @@ img {
       width: 230px;
     }
   }
-
-  .styled-select--sort-sidebar {
-    @media #{$medium} {
-      width: 230px;
-    }
-    @media #{$large} {
-      float: right;
-    }
-  }
 }
 
 .section__title {
@@ -82,7 +73,7 @@ img {
 .content--sidebar {
   display: none;
 
-  @media #{$medium} {
+  @media #{$large} {
     background: darken($light-gray, 5%);
     border-radius: $border-radius;
     display: block;
@@ -113,4 +104,24 @@ img {
     color: darken($dark-blue, 4%);
     margin: 0;
   }
+}
+
+/*------ Prepend ------*/
+
+.prepend--location:before {
+  content: "\f041";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--rating:before {
+  content: "\f087";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--reviews:before {
+  content: "\f0c0";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
 }

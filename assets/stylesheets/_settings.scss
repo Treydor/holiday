@@ -12,7 +12,7 @@ $header-font: $light 100%/1.5 "Lato", sans-serif;
 // Colors
 $blue:                #6397d2;
 $dark-blue:           #395667;
-$green:               #3cab86;
+$green:               #3cca82;
 $black:               #555;
 $light-gray:          #eee;
 $gray:                #999;
@@ -36,4 +36,8 @@ $medium: "(min-width: 640px)";
 $large: "(min-width: 900px)";
 
 // Extra Large Screens
-$extra-large: "(min-width: 1200px)";
+$extra-large: "(max-width: 1200px)";
+
+// Custom
+$hotels: "(min-width: 700px) and (max-width: 1200px)";
+$flights: "(min-width: 321px) and (max-width: 1200px)";

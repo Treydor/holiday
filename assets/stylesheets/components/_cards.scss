@@ -1,42 +1,40 @@
-/*------ Card List & Item ------*/
+/*------ Card List ------*/
 
 .card-list {
+  @extend %clearfix;
   @include clean-list;
 }
 
 .card-list__item {
-  margin-bottom: 1.5rem;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
   @media #{$medium} {
     float: left;
     margin-left: 3%;
     width: 48.5%;
 
-    &:nth-of-type(2n+1) { margin-left: 0; }
-  }
+    &:first-of-type {
+      margin-left: 0;
+    }
 
-  @media #{$medium} {
-    float: left;
-    margin-left: 3%;
-    width: 48.5%;
-
-    &:nth-of-type(2n+1) { margin-left: 0; }
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
   }
 
   @media #{$large} {
-    width: 31%;
+    margin-left: 2%;
+    width: 31.5%;
 
-    &:nth-of-type(2n+1) { margin-left: 3%; }
-    &:nth-of-type(3n+1) { margin-left: 0; }
-    &:nth-of-type(3n+1) { margin-left: 0; }
+    &:nth-of-type(2n+1) {
+      margin-left: 2%;
+    }
+
+    &:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
   }
 }
 
-/*------ Small Cards ------*/
+/*------ Card Styles ------*/
 
 .card {
   @include transition (border $duration $timing);
@@ -44,6 +42,7 @@
   border: 1px solid $border-light;
   border-radius: $border-radius;
   display: block;
+  margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
 
@@ -51,199 +50,52 @@
     border: 1px solid darken($border-light, 5%);
     text-decoration: none;
   }
+}
 
-  &:hover .card__overlay {
-    background: none;
+
+.card--large {
+  font-size: .85rem;
+
+  p {
+    margin-bottom: 0;
   }
 }
+
+/*------ Card Structure ------*/
 
 .card__photo {
   background-size: cover;
   height: 200px;
 }
 
-.card__overlay {
-  @include transition (background $duration $timing);
-  background: rgba(0, 0, 0, 0.1);
-  height: 100%;
-}
-
-.card__body {
-  padding: 1rem;
-}
-
-.card__location {
-  @include ellipsis;
-  display: block;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.card__footer {
-  @extend %clearfix;
-  border-top: 1px solid $border-light;
-  font-size: .85rem;
-  padding: .75rem 1rem;
-}
-
-.card__price {
-  float: left;
-  font-weight: $bold;
-}
-
-.card__price--sale {
-  color: $green;
-  font-weight: $bold;
-}
-
-.card__rating {
-  color: $green;
-  float: right;
-}
-
-/*------ Large cards ------*/
-
-.card--large {
-  @include transition (border $duration $timing);
-  font-size: .85rem;
-  margin-bottom: 1rem;
-  margin-left: 0;
-  width: 100%;
-
-  p {
-    margin-bottom: 0;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.large-card__module {
-
-  @media #{$large} {
-    float: left;
-    text-align: left;
-  }
-}
-
-.large-card__module--photo {
-  background-size: cover;
-  height: 150px;
-  width: 100%;
-
-  @media #{$large} {
-    text-align: center;
-    width: 100%;
-  }
-
-  @media #{$extra-large} {
-    border-right: 1px solid $border-light;
-    height: 190px;
-    margin: 0;
-    width: 25%;
-  }
-}
-
-.large-card__module--small {
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-
-  @media #{$large} {
-    width: 50%;
-  }
-
-  @media #{$extra-large} {
-    margin: 0;
-    width: 25%;
-  }
-
-  button {
-    margin-top: 1rem;
-  }
-}
-
-.large-card__module--medium {
+.card__section {
   border-bottom: 1px solid $border-light;
   padding: 1rem;
-  width: 100%;
 
-  @media #{$large} {
+  &:last-of-type {
     border-bottom: 0;
-    border-right: 1px solid $border-light;
-    margin: 0;
-    text-align: left;
-    width: 50%;
   }
 }
 
-.card__header {
+.card__section--large {
+  border: 0;
   margin-bottom: .75rem;
-
-  @media #{$medium} {
-    margin-bottom: .55rem
-  }
-}
-
-.card__title {
-  font-size: 1rem;
-  font-weight: $bold;
-  margin: 0;
-  text-align: center;
-
-  @media #{$large} {
-    display: inline-block;
-    text-align: left;
-  }
-}
-
-.card__class {
-  @extend %clearfix;
-  @include clean-list;
-  font-size: 1rem;
-  text-align: center;
-
-  @media #{$large} {
-    display: inline-block;
-    text-align: left;
-  }
-
-  li {
-    color: $gray;
-    display: inline-block;
-  }
-
-  .empty {
-    color: darken($light-gray, 5%);
-  }
-}
-
-.card-info {
-  @include clean-list;
-}
-
-.card-info__item {
-  margin-bottom: .5rem;
+  padding: 0;
 
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
-.card-info__item--landmark:before {
-  content: "\f041";
-  font-family: "FontAwesome";
-  margin-right: .25rem;
-}
+/*------ Card Items ------*/
 
-.card__total {
-  font-size: 1.5rem;
+.card__title {
+  @include ellipsis;
+  font-size: 1rem;
   font-weight: $bold;
   margin: 0;
+  text-align: center;
 }
-
-/*------ Card Special Labels ------*/
 
 .card__special {
   background: rgba(60, 171, 134, 0.9);
@@ -256,6 +108,49 @@
   padding: .5rem 1rem;
   position: absolute;
   text-transform: uppercase;
+}
+
+.card__name {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.card__class {
+  @extend %clearfix;
+  @include clean-list;
+  float: right;
+
+  @media #{$hotels} {
+    float: none;
+  }
+
+  li {
+    color: $gray;
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  .empty {
+    color: darken($light-gray, 8%);
+  }
+}
+
+.card__info {
+  @include clean-list;
+
+  li {
+    margin-bottom: .75rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card__price {
+  margin: 0;
 }
 
 /*------ Card photos ------*/

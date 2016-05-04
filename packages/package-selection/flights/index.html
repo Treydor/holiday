@@ -10,91 +10,96 @@ title: Holiday - Packages
     <div class="sidebar__section">
       <ul class="filter-list">
         <li>
-          <h4 class="filter-list__header">Hotel class</h4>
+          <h4 class="filter-list__header">Number of stops</h4>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">5+ stars
+            <input type="checkbox">Nonstop
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">4 stars
+            <input type="checkbox">1 stop
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">3 stars
-          </label>
-        </li>
-        <li>
-          <label class="label--clickable">
-            <input type="checkbox">2 stars
-          </label>
-        </li>
-        <li>
-          <label class="label--clickable">
-            <input type="checkbox">1 star
+            <input type="checkbox">2+ stops
           </label>
         </li>
       </ul>
       <ul class="filter-list">
         <li>
-          <h4 class="filter-list__header">Average nightly rate</h4>
+          <h4 class="filter-list__header">Departing Milwaukee</h4>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">Less than $74
+            <input type="checkbox">Morning (6am to 11:59am)
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">$75 to $124
+            <input type="checkbox">Afternoon (12pm to 5:59pm)
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">$125 to $199
+            <input type="checkbox">Evening (6pm to 11:59pm)
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">$200 to $299
-          </label>
-        </li>
-        <li>
-          <label class="label--clickable">
-            <input type="checkbox">$299+
+            <input type="checkbox">Night (12pm to 5:59am)
           </label>
         </li>
       </ul>
       <ul class="filter-list">
         <li>
-          <h4 class="filter-list__header">User rating</h4>
+          <h4 class="filter-list__header">Departing Orlando</h4>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">4.5 to 5
+            <input type="checkbox">Morning (6am to 11:59am)
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">4 to 5
+            <input type="checkbox">Afternoon (12pm to 5:59pm)
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">3 to 5
+            <input type="checkbox">Evening (6pm to 11:59pm)
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">2 to 5
+            <input type="checkbox">Night (12pm to 5:59am)
+          </label>
+        </li>
+      </ul>
+      <ul class="filter-list">
+        <li>
+          <h4 class="filter-list__header">Airlines included</h4>
+        </li>
+        <li>
+          <label class="label--clickable">
+            <input type="checkbox">United
           </label>
         </li>
         <li>
           <label class="label--clickable">
-            <input type="checkbox">1 to 5
+            <input type="checkbox">American
+          </label>
+        </li>
+        <li>
+          <label class="label--clickable">
+            <input type="checkbox">Delta
+          </label>
+        </li>
+        <li>
+          <label class="label--clickable">
+            <input type="checkbox">Spirit
           </label>
         </li>
       </ul>
@@ -106,25 +111,25 @@ title: Holiday - Packages
   <main class="content">
     <section class="content__search-details">
       <div class="row">
-        <div class="column column--half">
+        <div class="module module--6">
           <p>Milwaukee, WI (MKE) to Orlando, FL (MCO)</p>
           <p>Saturday, July 9 to Monday, July 18</p>
         </div>
-        <div class="column column--half">
+        <div class="module module--6">
           <div class="row">
-            <div class="column--fourth--locked">
+            <div class="module module--3">
               <p>9</p>
               <p>Nights</p>
             </div>
-            <div class="column--fourth--locked">
+            <div class="module module--3">
               <p>1</p>
               <p>Room</p>
             </div>
-            <div class="column--fourth--locked">
+            <div class="module module--3">
               <p>2</p>
               <p>Adults</p>
             </div>
-            <div class="column--fourth--locked">
+            <div class="module module--3">
               <p>0</p>
               <p>Children</p>
             </div>
@@ -134,35 +139,33 @@ title: Holiday - Packages
     </section>
     <section class="content__steps">
       <hr class="steps__progression-line">
-      <div class="column column--center column--third">
-        <span class="steps__circle steps__circle--current">1</span>
+      <div class="module module--center module--4">
+        <span class="steps__circle steps__circle--completed"></span>
         <label class="steps__label">Select a hotel</label>
       </div>
-      <div class="column column--center column--third">
-        <span class="steps__circle">2</span>
+      <div class="module module--center module--4">
+        <span class="steps__circle steps__circle--current">2</span>
         <label class="steps__label">Select a flight</label>
       </div>
-      <div class="column column--center column--third">
+      <div class="module module--center module--4">
         <span class="steps__circle">3</span>
         <label class="steps__label">Review &amp; pay</label>
       </div>
     </section>
     <section class="content__search-results">
       <div class="section__header">
-        <h2 class="section__title">Displaying hotels in Orlando, FL</h2>
-        <div class="styled-select styled-select--sort-sidebar">
+        <h2 class="section__title">Displaying flights from MKE to MCO</h2>
+        <div class="styled-select styled-select--sort">
           <select class="styled-select__list">
-            <option value="price-low">Price (Lowest first)</option>
-            <option value="price-high">Price (Highest first)</option>
-            <option value="price-high">Hotel class (Lowest first)</option>
-            <option value="price-high">Hotel class (Highest first)</option>
-            <option value="rating">Guest Rating (Lowest first)</option>
-            <option value="rating">Guest Rating (Highest first)</option>
-            <option value="alpha">Alphabetical (A-Z)</option>
+            <option>Price (Lowest first)</option>
+            <option>Price (Highest first)</option>
+            <option>Departure (Earliest first)</option>
+            <option>Departure (Latest first)</option>
+            <option>Alphabetical (A-Z)</option>
           </select>
         </div>
       </div>
-      {% include search/packages/result-list.html %}
+      {% include search/packages/results-flights.html %}
     </section>
   </main>
 </div>

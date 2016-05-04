@@ -65,12 +65,6 @@
   max-width: 700px;
   position: relative;
   text-align: center;
-
-  .column--third {
-    float: left;
-    margin: 0;
-    width: 33.33%;
-  }
 }
 
 .steps__progression-line {
@@ -115,8 +109,18 @@
 
 .steps__circle--current {
   @extend .pulse;
-  border: 2px solid $blue;
-  color: $blue;
+  background: $gray;
+  color: $white;
+}
+
+.steps__circle--completed {
+  background: lighten($green, 47.5%);
+
+  &:before {
+    color: $green;
+    content: "\f00c";
+    font-family: "FontAwesome";
+  }
 }
 
 .steps__label {

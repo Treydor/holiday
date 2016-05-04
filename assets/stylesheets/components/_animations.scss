@@ -6,9 +6,9 @@
 
 @keyframes pulse {
   0% {
-    border-color: $blue;
+    background: $gray;
   }
   50% {
-    border-color: lighten($blue, 10%);
+    background: lighten($gray, 10%);
   }
 }
