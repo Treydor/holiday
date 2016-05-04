@@ -4,12 +4,13 @@ $regular: 400;
 $bold: 700;
 
 // Body Font
-$body-font: $regular 100%/1.5 "Open Sans", sans-serif;
+$body-font: $regular 100%/1.5 "Lato", sans-serif;
 
 // Header Font
-$header-font: $light 100%/1.5 "Open Sans", sans-serif;
+$header-font: $light 100%/1.5 "Lato", sans-serif;
 
 // Colors
+$blue:                #6397d2;
 $dark-blue:           #395667;
 $green:               #3cab86;
 $black:               #555;
@@ -29,7 +30,10 @@ $duration: .2s;
 $timing: ease-in-out;
 
 // Medium Screens
-$medium: "(min-width: 600px)";
+$medium: "(min-width: 640px)";
 
-// Medium Screens
+// Large Screens
 $large: "(min-width: 900px)";
+
+// Extra Large Screens
+$extra-large: "(min-width: 1200px)";
