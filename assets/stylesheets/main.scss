@@ -10,6 +10,7 @@
 @import "components/layout";
 @import "components/grid";
 @import "components/typography";
+@import "components/animations";
 @import "components/cards";
 @import "components/forms";
 @import "components/buttons";
@@ -20,3 +21,6 @@
 
 // Utilities
 @import "components/utilities";
+
+// Vendor
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
