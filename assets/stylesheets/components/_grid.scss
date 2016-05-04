@@ -4,12 +4,12 @@
   @extend %clearfix;
   margin-bottom: 1rem;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   @media #{$medium} {
     margin-bottom: 1.5rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -48,7 +48,7 @@
   }
 
   .column--fourth {
-    width: 24.5%;
+    width: 23.5%;
   }
 }
 
@@ -58,6 +58,16 @@
   float: left;
   margin-left: 2%;
   width: 32%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.column--fourth--locked {
+  float: left;
+  margin-left: 2%;
+  width: 23.5%;
 
   &:first-of-type {
     margin-left: 0;

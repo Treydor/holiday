@@ -8,14 +8,14 @@ input[type="number"],
 input[type="tel"],
 input[type="url"],
 input[type="time"],
-textarea, button {
+textarea {
   background: $white;
   border: 0;
   border-radius: $border-radius;
   color: $black;
   font-size: .9rem;
   outline: none;
-  padding: .8rem;
+  padding: .6rem;
   width: 100%;
 }
 
@@ -38,7 +38,7 @@ textarea, button {
 /*------ Date picker  ------*/
 
 input[type="date"] {
-  height: 44.58px;
+  height: 37.94px;
 }
 
 ::-webkit-inner-spin-button {
@@ -48,10 +48,11 @@ input[type="date"] {
 
 /*------ Custom Select  ------*/
 
-.select-style {
+.styled-select {
   background: $white;
+  border: 1px solid $border-light;
   border-radius: $border-radius;
-  height: 44.59px;
+  height: 37.94px;
   overflow: hidden;
   position: relative;
 
@@ -67,7 +68,7 @@ input[type="date"] {
   }
 }
 
-.select__list {
+.styled-select__list {
   -moz-appearance: none;
   -webkit-appearance: none;
   background: transparent;
@@ -83,19 +84,10 @@ input[type="date"] {
   z-index: 2;
 }
 
-.select__list:-moz-focusring {
+.styled-select:-moz-focusring {
   border: 0;
   color: transparent;
   text-shadow: 0 0 0 $black;
-}
-
-.select__section-sort {
-  border: 1px solid $border-light;
-  width: 100%;
-
-  @media #{$medium} { max-width: 220px; }
-
-  @media #{$large} { float: right; }
 }
 
 /*------ Labels  ------*/
@@ -103,7 +95,7 @@ input[type="date"] {
 label {
   color: $white;
   display: inline-block;
-  font-size: .9rem;
+  font-size: .85rem;
   font-weight: $bold;
   margin-bottom: .5rem;
   text-transform: uppercase;
