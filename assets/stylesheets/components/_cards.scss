@@ -6,6 +6,8 @@
 }
 
 .card-list__item {
+  font-size: .85rem;
+
   @media #{$medium} {
     float: left;
     margin-left: 3%;
@@ -52,7 +54,6 @@
   }
 }
 
-
 .card--large {
   font-size: .85rem;
 
@@ -61,11 +62,37 @@
   }
 }
 
+.card--selected {
+
+  .card__section {
+    padding: .75rem 1rem;
+  }
+
+  .card__name {
+    margin-bottom: .5rem;
+  }
+
+  .card__photo {
+    background-size: cover;
+    border-right: 1px solid $border-light;
+    height: 100px;
+  }
+
+  .row--flights {
+    border-right: 0;
+    padding: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
 /*------ Card Structure ------*/
 
 .card__photo {
   background-size: cover;
-  height: 200px;
+  height: 225px;
 }
 
 .card__section {
@@ -120,11 +147,6 @@
 .card__class {
   @extend %clearfix;
   @include clean-list;
-  float: right;
-
-  @media #{$hotels} {
-    float: none;
-  }
 
   li {
     color: $gray;
@@ -151,6 +173,11 @@
 
 .card__price {
   margin: 0;
+}
+
+.card__total {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /*------ Card photos ------*/
