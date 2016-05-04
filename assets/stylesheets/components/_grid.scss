@@ -1,75 +1,181 @@
-/*------ Grid ------*/
+/*------ Row ------*/
 
 .row {
   @extend %clearfix;
-  margin-bottom: 1rem;
+}
 
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+/*------ Module ------*/
 
+.module {
   @media #{$medium} {
-    margin-bottom: 1.5rem;
+    float: left;
   }
 }
 
-.column {
-  margin-bottom: 1rem;
+/*------ Module sizes ------*/
+
+.module--3 {
+  @media #{$medium} {
+    width: 25%;
+  }
+}
+
+.module--4 {
+  @media #{$medium} {
+    width: 33.33%;
+  }
+}
+
+.module--6 {
+  @media #{$medium} {
+    width: 50%;
+  }
+}
+
+.module--8 {
+  @media #{$medium} {
+    width: 66.66%;
+  }
+}
+
+.module--9 {
+  @media #{$medium} {
+    width: 75%;
+  }
+}
+
+.module--12 {
   width: 100%;
+}
+
+/*------ Module modifiers ------*/
+
+.module--center {
+  text-align: center;
+}
+
+.module--right {
+  text-align: right;
+}
+
+.module--add-padding {
+  padding: 1rem;
+}
+
+.module--photo {
+  background: url("../../assets/images/cards/berlin.jpg") center no-repeat;
+  background-size: cover;
+  height: 190px;
+}
+
+/*------ Custom modifiers ------*/
+
+.row--flights {
+  border-bottom: 1px solid $border-light;
+  border-right: 1px solid $border-light;
+  padding: 1.5rem;
 
   &:last-of-type {
-    margin-bottom: 0;
+    border-bottom: 0;
   }
 
-  @media #{$medium} {
-    float: left;
-    margin-bottom: 0;
-    margin-left: 2%;
+  @media #{$flights} {
+    border-bottom: 1px solid $border-light;
+    border-right: 0;
+    padding: 1rem;
 
-    &:first-of-type {
-      margin-left: 0;
+    &:last-of-type {
+      border-bottom: 1px solid $border-light;
     }
   }
 }
 
-/*------ Grid mobile styles ------*/
+.module--flights-lg {
+  float: left;
+  width: 75%;
 
-@media #{$medium} {
-  .column--two-thirds {
-    width: 66%;
-  }
-
-  .column--half {
-    width: 49%;
-  }
-
-  .column--third {
-    width: 32%;
-  }
-
-  .column--fourth {
-    width: 23.5%;
+  @media #{$flights} {
+    float: none;
+    text-align: center;
+    width: 100%;
   }
 }
 
-/*------ Locked columns ------*/
-
-.column--third--locked {
+.module--flights-sm {
   float: left;
-  margin-left: 2%;
-  width: 32%;
+  width: 25%;
 
-  &:first-of-type {
-    margin-left: 0;
+  @media #{$flights} {
+    float: none;
+    width: 100%;
   }
 }
 
-.column--fourth--locked {
-  float: left;
-  margin-left: 2%;
-  width: 23.5%;
+/*------ Custom modifiers ------*/
 
-  &:first-of-type {
-    margin-left: 0;
+.module--hotels-photo {
+  width: 100%;
+
+  @media #{$large} {
+    width: 25%;
+  }
+
+  @media #{$hotels} {
+    border-bottom: 1px solid $border-light;
+    width: 100%;
+  }
+}
+
+.module--hotels-md {
+  border-bottom: 1px solid $border-light;
+  width: 100%;
+
+  @media #{$large} {
+    border-bottom: 0;
+    border-right: 1px solid $border-light;
+    width: 50%;
+  }
+}
+
+.module--hotels-sm {
+  width: 100%;
+
+  @media #{$large} {
+    width: 25%;
+  }
+
+  @media #{$hotels} {
+    width: 50%;
+  }
+}
+
+/*------ Custom modifiers ------*/
+
+.content__search-details {
+
+  .module--3 {
+    float: left;
+    width: 25%;
+  }
+
+  .module--6 {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media #{$medium} {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*------ Custom modifiers ------*/
+
+.content__steps {
+  .module--4 {
+    float: left;
+    width: 33.33%;
   }
 }
