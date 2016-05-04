@@ -40,7 +40,9 @@ img {
   width: 90%;
 }
 
-.wrapper { @extend %clearfix; }
+.container--narrow {
+  max-width: 900px;
+}
 
 /*------ Section ------*/
 
@@ -110,6 +112,12 @@ img {
 
 .prepend--location:before {
   content: "\f041";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--phone:before {
+  content: "\f095";
   font-family: "FontAwesome";
   margin-right: .25rem;
 }
