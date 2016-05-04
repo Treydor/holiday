@@ -36,8 +36,8 @@ $medium: "(min-width: 640px)";
 $large: "(min-width: 900px)";
 
 // Extra Large Screens
-$extra-large: "(max-width: 1200px)";
+$extra-large: "(min-width: 1200px)";
 
 // Custom
 $hotels: "(min-width: 700px) and (max-width: 1200px)";
-$flights: "(min-width: 321px) and (max-width: 1200px)";
+$flights: "(min-width: 200px) and (max-width: 1200px)";
