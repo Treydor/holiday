@@ -3,15 +3,18 @@
 footer {
   background: $dark-blue;
   color: $white;
-  font-size: .9rem;
 
-  a { text-decoration: underline; }
+  a {
+    text-decoration: underline;
+  }
 }
 
 .footer-section {
   margin-bottom: 1.5rem;
 
-  &:last-of-type { margin-bottom: 0; }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 /*------ Footer Title ------*/
@@ -24,19 +27,23 @@ footer {
 
 /*------ Footer Lists ------*/
 
-.footer-menu, .social-menu { @include clean-list; }
+.footer-menu, .social-menu {
+  @include clean-list;
+}
 
 .footer-menu__link, .social-menu__link {
   text-decoration: none;
-
-  &:hover { text-decoration: none; }
 }
 
 .social-menu__item {
   display: inline-block;
   margin-left: 1.5rem;
 
-  &:first-of-type { margin-left: 0; }
+  &:first-of-type {
+    margin-left: 0;
+  }
 }
 
-.social-menu__icon { font-size: 1.4rem; }
+.social-menu__icon {
+  font-size: 1.4rem;
+}
