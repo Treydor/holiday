@@ -1,10 +1,10 @@
-/*------ Search ------*/
+/*------ Search form ------*/
 
 .search-table {
   background: $dark-blue;
   border-radius: $border-radius;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 620px;
   padding: 1.5rem;
   overflow: hidden;
   width: 100%;
@@ -55,151 +55,144 @@
   }
 }
 
-/*------ Search results filters ------*/
+/*------ Resuts top bar ------*/
 
-.filter-list {
+.search-results-top-bar {
+  @extend %clearfix;
+  background: $light-green;
+  background: -webkit-linear-gradient(to top, lighten($light-green, 1%), darken($light-green, 3%));
+  background: linear-gradient(to top, lighten($light-green, 1%), darken($light-green, 3%));
+  border-bottom: 1px solid darken($light-green, 7%);
+  font-size: .7rem;
+  font-weight: $extra-bold;
+  text-transform: uppercase;
+
+  @media #{$medium} {
+    height: 90px;
+    position: relative;
+    z-index: 999;
+  }
+}
+
+/*------ Search criteria ------*/
+
+.search-criteria-list {
+  @extend %clearfix;
   @include clean-list;
-  margin-bottom: 1.5rem;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 }
 
-.filter-list__header {
-  color: darken($dark-blue, 4%);
-  font-size: 1rem;
-  font-weight: $bold;
-  margin-bottom: .25rem;
-}
-
-/*------ Search results details ------*/
-
-.content__search-details {
-  border: 1px solid $border-light;
-  border-radius: $border-radius;
-  font-size: .85rem;
-  font-weight: $bold;
-  margin: 0 auto 3rem;
-  max-width: 700px;
-  padding: .5rem 1rem;
+.search-criteria-list__item {
+  border-bottom: 1px solid darken($light-green, 7%);
+  float: left;
+  padding: .75rem;
   text-align: center;
+  width: 50%;
 
-  p {
-    margin-bottom: 0;
+  &:nth-of-type(n+3) {
+    width: 25%;
   }
 
-  .column--half {
-    float: none;
-    margin: 0 0 1rem;
-    width: 100%;
+  i {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
 
-    @media #{$extra-large} {
-      float: left;
-      margin-bottom: 0;
-      width: 50%;
+  @media #{$medium} {
+    border-bottom: 0;
+    border-right: 1px solid darken($light-green, 7%);
+    height: 90px;
+    padding: 0;
+    padding-top: 15px;
+    width: 22.5%;
+
+    &:nth-of-type(n+3) {
+      width: 13.75%;
     }
   }
 }
 
-/*------ Search results steps ------*/
+/*------ Search steps ------*/
 
-.content__steps {
-  @extend %clearfix;
-  margin: 0 auto 3rem;
-  max-width: 700px;
+.search-steps {
   position: relative;
-  text-align: center;
+  height: 100px;
+
+  @media #{$medium} {
+    height: 80px;
+    width: 100%;
+  }
 }
 
-.steps__progression-line {
-  background: $border-light;
+.search-steps__line {
+  background: $light-gray;
   border: 0;
-  display: block;
   height: 2px;
-  left: 0;
   margin: 0 auto;
   position: absolute;
+  top: 38px;
+  left: 0;
   right: 0;
-  top: 28.5px;
+  bottom: 0;
   width: 75%;
-  z-index: -999;
+  z-index: 1;
 
-  @media #{$large} {
-    top: 32.5px;
+  @media #{$medium} {
+    margin: auto;
+    top: 0;
+    bottom: 0;
   }
 }
 
-.steps__circle {
-  background: $white;
-  border: 2px solid $border-light;
-  border-radius: $circle;
-  color: $border-light;
-  display: inline-block;
-  font-size: 1.1rem;
-  font-weight: $bold;
-  height: 55px;
-  line-height: 53px;
+.search-steps__list {
+  @extend %clearfix;
+  @include clean-list;
+  position: relative;
+}
+
+.search-steps__item {
+  float: left;
+  position: relative;
   text-align: center;
-  width: 55px;
-
-  @media #{$large} {
-    border: 2px solid $border-light;
-    font-size: 1.2rem;
-    height: 62px;
-    line-height: 56px;
-    width: 62px;
-  }
+  top: 20px;
+  width: 25%;
+  z-index: 2;
 }
 
-.steps__circle--current {
+.search-steps__circle {
+  background: $light-gray;
+  border-radius: $circle;
+  color: $gray;
+  display: block;
+  font-size: 1.2em;
+  line-height: 35px;
+  height: 35px;
+  margin: 0 auto .25rem;
+  text-align: center;
+  width: 35px;
+
+}
+
+.search-steps__circle--current {
   @extend .pulse;
-  background: $gray;
-  border: 2px solid $gray;
+  background: $blue;
   color: $white;
+  text-shadow: 1px 1px 1px #bbb;
 }
 
-.steps__circle--completed {
-  background: lighten($green, 47.5%);
+.search-steps__circle--completed {
+  background: $orange;
+  text-shadow: 1px 1px 1px #bbb;
+  transition: transform $cubic-bezier .3s;
 
   &:before {
-    color: $green;
+    color: $white;
     content: "\f00c";
     font-family: "FontAwesome";
+    font-weight: $regular;
   }
-}
-
-.steps__circle--link {
-  transition: border $duration $timing;
 
   &:hover {
-    border: 2px solid darken($border-light, 8%);
+    transform: scale(1.2);
     text-decoration: none;
-  }
-}
-
-.steps__label {
-  color: $black;
-  display: block;
-  font-size: .85rem;
-  font-weight: $bold;
-  letter-spacing: .5px;
-  margin: .75rem 0 0;
-  text-transform: uppercase;
-}
-
-/*------ Your package ------*/
-
-.content__your-package {
-  font-size: .85rem;
-  margin: 0 auto 3rem;;
-  width: 600px;
-
-  &:before {
-    content: "Your selection";
-    font-weight: $bold;
-    letter-spacing: .5px;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
   }
 }
