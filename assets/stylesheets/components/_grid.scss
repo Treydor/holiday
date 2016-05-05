@@ -50,6 +50,11 @@
 
 /*------ Module fixed sizes ------*/
 
+.module--3-fixed {
+  float: left;
+  width: 25%;
+}
+
 .module--4-fixed {
   float: left;
   width: 33.33%;
@@ -78,132 +83,4 @@
   background: url("../../assets/images/cards/berlin.jpg") center no-repeat;
   background-size: cover;
   height: 190px;
-}
-
-/*------ Flight card ------*/
-
-.row--flights {
-  border-bottom: 1px solid $border-light;
-  border-right: 1px solid $border-light;
-  padding: 1.5rem;
-
-  &:last-of-type {
-    border-bottom: 0;
-  }
-
-  @media #{$flights} {
-    border-bottom: 1px solid $border-light;
-    border-right: 0;
-    padding: 1rem;
-
-    &:last-of-type {
-      border-bottom: 1px solid $border-light;
-    }
-  }
-}
-
-.module--flights-lg {
-  float: left;
-  width: 75%;
-
-  @media #{$flights} {
-    float: none;
-    width: 100%;
-  }
-}
-
-.module--flights-sm {
-  float: left;
-  width: 25%;
-
-  @media #{$flights} {
-    float: none;
-    width: 100%;
-  }
-}
-
-/*------ Hotel card ------*/
-
-.module--hotels-photo {
-  width: 100%;
-
-  @media #{$large} {
-    width: 25%;
-  }
-
-  @media #{$hotels} {
-    border-bottom: 1px solid $border-light;
-    width: 100%;
-  }
-}
-
-.module--hotels-md {
-  border-bottom: 1px solid $border-light;
-  width: 100%;
-
-  @media #{$extra-large} {
-    border-bottom: 0;
-    border-right: 1px solid $border-light;
-    width: 50%;
-  }
-}
-
-.module--hotels-sm {
-  width: 100%;
-
-  @media #{$extra-large} {
-    width: 25%;
-  }
-}
-
-/*------ Search details ------*/
-
-.content__search-details {
-
-  .module--3 {
-    float: left;
-    width: 25%;
-  }
-
-  .module--6 {
-    margin-bottom: 1rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
-    @media #{$medium} {
-      margin-bottom: 0;
-    }
-  }
-}
-
-/*------ Content steps ------*/
-
-.content__steps {
-  .module--4 {
-    float: left;
-    width: 33.33%;
-  }
-}
-
-/*------ Review purchase ------*/
-
-.module--review {
-  font-size: .85rem;
-  width: 100%;
-
-  @media #{$large} {
-    margin-left: 3%;
-    width: 30%;
-
-    &:first-of-type {
-      margin-left: 0;
-      width: 67%;
-    }
-  }
-
-  p {
-    margin: 0;
-  }
 }
