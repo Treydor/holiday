@@ -12,10 +12,6 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media #{$medium} {
-    font-size: 104%;
-  }
 }
 
 body {
@@ -35,77 +31,128 @@ img {
 .container {
   @extend %clearfix;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 3rem 0;
   width: 90%;
 }
 
-.container--narrow {
-  max-width: 900px;
+/*------ Search filters ------*/
+
+.filter-box {
+  background: $white;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
+  display: none;
+  margin-top: .5rem;
+  position: absolute;
+  max-width: 600px;
+  z-index: 999;
+  width: 80%;
+
+  .row {
+    border-bottom: 1px solid $border-light;
+    padding: 1.5rem;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+
+  .module--6 {
+    margin-bottom: 1.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media #{$medium} {
+      margin: 0;
+    }
+  }
+}
+
+.filter-box__header {
+  margin-bottom: .5rem;
+}
+
+.filter-box__list {
+  @include clean-list;
+
+  label {
+    color: $black;
+  }
 }
 
 /*------ Section ------*/
 
 .section__header {
-  @extend %clearfix;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   .styled-select--sort {
+    height: 40.2px;
+    margin-top: 1rem;
+    width: 230px;
+
     @media #{$medium} {
       float: right;
-      width: 230px;
+      margin: 0;
     }
   }
 }
 
 .section__title {
-  display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   font-weight: $regular;
-  line-height: 40px;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
 }
 
-/*------ Content and Sidebar ------*/
-
-.content {
-  overflow: hidden;
-}
-
-.content--sidebar {
-  display: none;
-
-  @media #{$large} {
-    background: darken($light-gray, 5%);
-    border-radius: $border-radius;
-    display: block;
-    float: left;
-    margin-right: 1.5rem;
-    width: 250px;
-  }
-}
-
-.content--sidebar .container {
-  padding: 3rem .5rem;
-}
-
-.sidebar__header {
-  border-bottom: 1px solid $light-gray;
-  color: darken($dark-blue, 4%);
-  font-size: 1rem;
-  font-weight: $bold;
+.section__title--inline {
+  display: inline-block;
   margin: 0;
-  padding: 1rem 1.5rem;
-  text-align: center;
 }
 
-.sidebar__section {
-  padding: 1.5rem;
+/*------ Review WIP ------*/
 
-  label {
-    color: darken($dark-blue, 4%);
+.review__section {
+  @extend %clearfix;
+  margin-bottom: 1.5rem;
+
+  @media #{$medium} {
+    float: left;
+    margin-bottom: 0;
+    margin-left: 10%;
+    width: 40%;
+
+    &:first-of-type {
+      margin-left: 0;
+      width: 50%;
+    }
+  }
+
+  p {
     margin: 0;
   }
+
+  .row {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 {
+    border-bottom: 1px solid $border-light;
+    font-size: .8rem;
+    font-weight: $extra-bold;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.review__photo {
+  height: 100px;
 }
 
 /*------ Prepend ------*/
@@ -130,6 +177,12 @@ img {
 
 .prepend--reviews:before {
   content: "\f0c0";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--plus:before {
+  content: "\f055";
   font-family: "FontAwesome";
   margin-right: .25rem;
 }
