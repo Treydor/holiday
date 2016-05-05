@@ -45,22 +45,19 @@ a {
 
 /*------ Basic type styles ------*/
 
+strong {
+  font-weight: $bold;
+}
+
 .strike-through {
   text-decoration: line-through;
 }
 
 .important {
-  color: $green;
   font-weight: $bold;
 }
 
 .subtitle {
   color: $gray;
   font-size: .75rem;
-}
-
-.total-price {
-  @extend .important;
-  margin: 1rem 0 0;
-  text-align: center;
 }
