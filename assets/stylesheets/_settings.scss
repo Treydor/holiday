@@ -1,33 +1,34 @@
 // Font Weights
-$light: 300;
 $regular: 400;
 $bold: 700;
+$extra-bold: 900;
 
 // Body Font
-$body-font: $regular 100%/1.5 "Lato", sans-serif;
+$body-font: $regular 16px/1.5 "Lato", sans-serif;
 
 // Header Font
-$header-font: $light 100%/1.5 "Lato", sans-serif;
+$header-font: $regular 16px/1.5 "Lato", sans-serif;
 
 // Colors
-$blue:                #6397d2;
-$dark-blue:           #395667;
-$green:               #3cca82;
+$blue:                #3abff0;
+$dark-blue:           #454a51;
+$orange:              #f29b41;
 $black:               #555;
-$light-gray:          #eee;
-$gray:                #999;
+$light-gray:          #f6f7f8;
+$light-green:         #d9f0eb;
+$gray:                #888;
 $white:               #fff;
 
 // Border Color
-$border-light:        #ddd;
+$border-light:        #e3e6e9;
 
 // Border Radius
 $border-radius: 3px;
 $circle: 50%;
 
 // Transitions
+$cubic-bezier: ease-in-out;
 $duration: .2s;
-$timing: ease-in-out;
 
 // Medium Screens
 $medium: "(min-width: 640px)";
