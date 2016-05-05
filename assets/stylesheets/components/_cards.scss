@@ -154,7 +154,7 @@
 
   .card__section--photo {
     border-bottom: 1px solid $border-light;
-    height: 200px;
+    height: 180px;
 
     @media #{$medium} {
       background-size: cover;
@@ -165,6 +165,10 @@
       border-bottom: 0;
       border-right: 1px solid $border-light;
       width: 20%;
+    }
+
+    @media #{$extra-large} {
+      height: 200px;
     }
   }
 
@@ -189,19 +193,24 @@
   }
 
   .card__section--large {
+    padding: 0;
+
     @media #{$large} {
+      border-bottom: 0;
       border-right: 1px solid $border-light;
       width: 75%;
     }
 
     .row {
       border-bottom: 1px solid $border-light;
-      padding: 1.3rem 1rem;
+      padding: 1.25rem 1rem;
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
 
       @media #{$large} {
-        &:last-of-type {
-          border-bottom: 0;
-        }
+        padding: 1.5rem 1rem;
       }
     }
   }
