@@ -1,8 +1,8 @@
 /*------ Hero ------*/
 
 .hero {
-  background: url("../../assets/images/hero/airplane-view.jpg") no-repeat;
-  background-position: 50%;
+  background: url("../../assets/images/hero/outdoors.jpg") no-repeat;
+  background-position: 50% 75%;
   background-size: cover;
 }
 
@@ -10,6 +10,6 @@
   padding: 2rem 0;
 
   @media #{$medium} {
-    padding: 3rem 0;
+    padding: 8rem 0;
   }
 }
