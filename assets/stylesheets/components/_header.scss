@@ -5,15 +5,17 @@ header {
 }
 
 header .container {
-  padding: 1rem 0;
+  padding: .5rem 0;
+  max-width: none;
 }
 
 .logo {
   color: $white;
   display: inline-block;
   float: left;
-  font-size: 1.75rem;
-  font-weight: $light;
+  font-size: 1.5rem;
+  font-weight: $bold;
+  line-height: 42px;
   margin-right: 2rem;
 
   &:hover {
@@ -48,12 +50,11 @@ header .container {
 .user-account {
   background: $white url("../../assets/images/user.svg") 50% 4px no-repeat;
   background-size: cover;
-  border: 2px solid $white;
   border-radius: $circle;
   display: block;
-  height: 35px;
-  margin-top: 3px;
-  width: 35px;
+  height: 30px;
+  margin-top: 5px;
+  width: 30px;
 }
 
 /*------ Desktop Navigation ------*/
@@ -83,5 +84,5 @@ header .container {
 }
 
 .nav--mobile .container {
-  padding: .5rem 0;
+  padding: .25rem 0;
 }
