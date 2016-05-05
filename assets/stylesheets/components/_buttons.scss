@@ -1,13 +1,15 @@
 /*------ Buttons ------*/
 
 .button {
-  @include transition (background $duration $timing);
   border: 0;
   border-radius: $border-radius;
   display: block;
-  font-size: .9rem;
-  font-weight: $bold;
-  padding: .5rem .5rem .6rem;
+  font-size: .8rem;
+  font-weight: $extra-bold;
+  letter-spacing: 1px;
+  padding: .8rem;
+  text-transform: uppercase;
+  transition: background $cubic-bezier $duration;
   width: 100%;
 
   &:hover {
@@ -16,11 +18,11 @@
 }
 
 .button--primary {
-  background: $green;
+  background: $orange;
   color: $white;
 
   &:hover {
-    background: darken($green, 5%);
+    background: darken($orange, 6%);
   }
 }
 
@@ -29,6 +31,35 @@
   color: $white;
 
   &:hover {
-    background: darken($blue, 5%);
+    background: darken($blue, 6%);
+  }
+}
+
+.button--empty {
+  background: none;
+  border: 2px dashed lighten($gray, 20%);
+  color: $gray;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button--filter-toggle {
+  background: $white;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: $extra-bold;
+  letter-spacing: 1px;
+  padding: .6rem 1rem;
+  text-transform: uppercase;
+
+  &:before {
+    content: "\f013";
+    font-family: "FontAwesome";
+    font-weight: $regular;
+    margin-right: .25rem;
   }
 }
