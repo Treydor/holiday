@@ -28,53 +28,6 @@
     </ul>
   </div>
   <div class="module module--6">
-    {% if page.url == "/packages/package-selection/hotels/index.html" %}
-    <div class="search-steps">
-      <hr class="search-steps__line">
-      <ul class="search-steps__list">
-        <li class="search-steps__item">
-          <span class="search-steps__circle search-steps__circle--current">1</span>
-          <p>Choose a hotel</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle">2</span>
-          <p>Choose a flight</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle">3</span>
-          <p>Review</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle">4</span>
-          <p>Purchase</p>
-        </li>
-      </ul>
-    </div>
-    {% endif %}
-    {% if page.url == "/packages/package-selection/flights/index.html" %}
-    <div class="search-steps">
-      <hr class="search-steps__line">
-      <ul class="search-steps__list">
-        <li class="search-steps__item">
-          <a class="search-steps__circle search-steps__circle--completed" href="{{ site.baseurl }}/packages/package-selection/hotels"></a>
-          <p>Choose a hotel</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle search-steps__circle--current">2</span>
-          <p>Choose a flight</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle">3</span>
-          <p>Review</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle">4</span>
-          <p>Purchase</p>
-        </li>
-      </ul>
-    </div>
-    {% endif %}
-    {% if page.url == "/packages/package-selection/review/index.html" %}
     <div class="search-steps">
       <hr class="search-steps__line">
       <ul class="search-steps__list">
@@ -96,29 +49,5 @@
         </li>
       </ul>
     </div>
-    {% endif %}
-    {% if page.url == "/packages/package-selection/purchase/index.html" %}
-    <div class="search-steps">
-      <hr class="search-steps__line">
-      <ul class="search-steps__list">
-        <li class="search-steps__item">
-          <a class="search-steps__circle search-steps__circle--completed" href="{{ site.baseurl }}/packages/package-selection/hotels"></a>
-          <p>Choose a hotel</p>
-        </li>
-        <li class="search-steps__item">
-          <a class="search-steps__circle search-steps__circle--completed" href="{{ site.baseurl }}/packages/package-selection/flights"></a>
-          <p>Choose a flight</p>
-        </li>
-        <li class="search-steps__item">
-          <a class="search-steps__circle search-steps__circle--completed" href="{{ site.baseurl }}/packages/package-selection/review"></a>
-          <p>Review</p>
-        </li>
-        <li class="search-steps__item">
-          <span class="search-steps__circle search-steps__circle--current">4</span>
-          <p>Purchase</p>
-        </li>
-      </ul>
-    </div>
-    {% endif %}
   </div>
 </div>
