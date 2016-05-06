@@ -1,15 +1,11 @@
 <div class="search-table">
-  <form class="packages" action="/holiday/flights/flight-selection/">
+  <form class="packages" action="{{ site.baseurl }}/flights/flight-selection/">
     <div class="row">
-      <label class="label--clickable">
-        <input type="radio" name="flight-type" checked>Round trip
-      </label>
-      <label class="label--clickable">
-        <input type="radio" name="flight-type">One way
-      </label>
-      <label class="label--clickable">
-        <input type="radio" name="flight-type">Multi-city
-      </label>
+      <ul class="flight-search-tabs">
+        <li class="flight-search-tabs__item flight-search-tabs__item--current">Round trip</li>
+        <li class="flight-search-tabs__item">One way</li>
+        <li class="flight-search-tabs__item">Multi-city</li>
+      </ul>
     </div>
     <div class="row">
       <div class="module module--6">
@@ -66,3 +62,10 @@
     </div>
   </form>
 </div>
+
+<script>
+  $(".flight-search-tabs__item").click(function(){
+    $(".flight-search-tabs__item").not(this).removeClass("flight-search-tabs__item--current");
+    $(this).toggleClass("flight-search-tabs__item--current");
+  });
+</script>
