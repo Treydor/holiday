@@ -62,6 +62,44 @@
   }
 }
 
+.flight-search-tabs {
+  @extend %clearfix;
+  @include clean-list;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+
+  @media #{$medium} {
+    margin-bottom: 0;
+  }
+}
+
+.flight-search-tabs__item {
+  border-left: 1px solid $border-light;
+  color: $gray;
+  cursor: pointer;
+  float: left;
+  font-size: .9rem;
+  padding: .6rem;
+  text-align: center;
+  transition: background $duration $cubic-bezier;
+  width: 33.33%;
+
+  &:first-of-type {
+    border-left: 0;
+  }
+
+  &:hover {
+    background: $light-gray;
+  }
+}
+
+.flight-search-tabs__item--current {
+  background: $light-gray;
+  color: $black;
+  transition: $duration $cubic-bezier;
+}
+
 /*------ Resuts top bar ------*/
 
 .search-results-top-bar {
