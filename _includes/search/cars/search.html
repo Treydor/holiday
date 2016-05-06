@@ -1,45 +1,48 @@
 <div class="search-table">
-  <form class="packages" action="/holiday/flights/flight-selection/">
+  <form class="packages" action="/holiday/cars/car-selection">
     <div class="row">
       <div class="module module--6">
-        <label>Flying from</label>
-        <input type="text" placeholder="Airport code or city">
+        <label>Picking up</label>
+        <input type="text" placeholder="City name">
       </div>
       <div class="module module--6">
-        <label>Flying to</label>
-        <input type="text" placeholder="Airport code or city">
+        <label>Droping off</label>
+        <input type="text" placeholder="Same as pickup">
       </div>
     </div>
     <div class="row">
       <div class="module module--6">
         <div class="module module--6">
-          <label>Departing</label>
+          <label>Pick up day</label>
           <input type="text" placeholder="mm/dd/yyyy">
         </div>
         <div class="module module--6">
-          <label>Returning</label>
-          <input type="text" placeholder="mm/dd/yyyy">
+          <label>Time</label>
+          <div class="styled-select">
+            <select class="styled-select__list">
+              <option>10:30am</option>
+              <option>11:00am</option>
+              <option>11:30am</option>
+              <option>12:00pm</option>
+              <option>etc</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="module module--6">
         <div class="module module--6">
-          <label>Adults</label>
-          <div class="styled-select">
-            <select class="styled-select__list">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
+          <label>Drop off day</label>
+          <input type="text" placeholder="mm/dd/yyyy">
         </div>
         <div class="module module--6">
-          <label>Children</label>
+          <label>Time</label>
           <div class="styled-select">
             <select class="styled-select__list">
-              <option>0</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+              <option>10:30am</option>
+              <option>11:00am</option>
+              <option>11:30am</option>
+              <option>12:00pm</option>
+              <option>etc</option>
             </select>
           </div>
         </div>

@@ -1,29 +1,25 @@
 <div class="search-table">
-  <form class="packages" action="/holiday/flights/flight-selection/">
+  <form class="packages" action="/holiday/hotels/hotel-selection/">
     <div class="row">
-      <div class="module module--6">
-        <label>Flying from</label>
-        <input type="text" placeholder="Airport code or city">
-      </div>
-      <div class="module module--6">
-        <label>Flying to</label>
-        <input type="text" placeholder="Airport code or city">
+      <div class="module module--12">
+        <label>Destination</label>
+        <input type="text" placeholder="Hotel name or address">
       </div>
     </div>
     <div class="row">
       <div class="module module--6">
         <div class="module module--6">
-          <label>Departing</label>
+          <label>Check in</label>
           <input type="text" placeholder="mm/dd/yyyy">
         </div>
         <div class="module module--6">
-          <label>Returning</label>
+          <label>Check out</label>
           <input type="text" placeholder="mm/dd/yyyy">
         </div>
       </div>
       <div class="module module--6">
-        <div class="module module--6">
-          <label>Adults</label>
+        <div class="module module--4">
+          <label>Rooms</label>
           <div class="styled-select">
             <select class="styled-select__list">
               <option>1</option>
@@ -32,7 +28,20 @@
             </select>
           </div>
         </div>
-        <div class="module module--6">
+        <div class="module module--4">
+          <label>Adults</label>
+          <div class="styled-select">
+            <select class="styled-select__list">
+              <option>2</option>
+              <option>1</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+        </div>
+        <div class="module module--4">
           <label>Children</label>
           <div class="styled-select">
             <select class="styled-select__list">
@@ -40,6 +49,9 @@
               <option>1</option>
               <option>2</option>
               <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
             </select>
           </div>
         </div>
@@ -47,7 +59,7 @@
     </div>
     <div class="row">
       <label class="label--clickable">
-        <input type="checkbox">Search nonstop flights only
+        <input type="checkbox">Non-smoking rooms only
       </label>
     </div>
     <div class="row add-margin-top">
