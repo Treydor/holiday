@@ -3,7 +3,7 @@
     <div class="row">
       <div class="module module--6">
         <label>Picking up</label>
-        <input type="text" placeholder="City name">
+        <input type="text" placeholder="City name, airport, zip code">
       </div>
       <div class="module module--6">
         <label>Droping off</label>
@@ -49,9 +49,36 @@
       </div>
     </div>
     <div class="row">
-      <label class="label--clickable">
-        <input type="checkbox">Search nonstop flights only
-      </label>
+      <div class="module module--6">
+        <label>Vehicle type</label>
+        <div class="styled-select">
+          <select class="styled-select__list">
+            <option>No preference</option>
+            <option>Compact</option>
+            <option>Economy</option>
+            <option>Standard</option>
+            <option>Fullsize</option>
+            <option>Premium</option>
+            <option>Luxary</option>
+            <option>Convertible</option>
+            <option>Minivan</option>
+            <option>Sports utility vehicle</option>
+          </select>
+        </div>
+      </div>
+      <div class="module module--6">
+        <label>Company</label>
+        <div class="styled-select">
+          <select class="styled-select__list">
+            <option>No preference</option>
+            <option>Avis</option>
+            <option>Budget</option>
+            <option>Enterprise</option>
+            <option>Hertz</option>
+            <option>Thrifty car rental</option>
+          </select>
+        </div>
+      </div>
     </div>
     <div class="row add-margin-top">
       <button class="button button--primary">Search</button>

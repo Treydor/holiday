@@ -52,7 +52,32 @@
 
   .label--clickable {
     font-size: .9rem;
+    margin-left: .5rem;
+
+
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
+}
+
+.search__tab {
+  border-radius: $border-radius;
+  color: $white;
+  cursor: pointer;
+  float: left;
+  font-size: .8rem;
+  font-weight: $extra-bold;
+  letter-spacing: 1px;
+  margin-bottom: .75rem;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.search__tab--current {
+  background: lighten($dark-blue, 5%);
 }
 
 /*------ Resuts top bar ------*/
