@@ -16,7 +16,7 @@ html {
 
 body {
   background: $light-gray;
-  color: $black;
+  color: $dark-gray;
 }
 
 /*------ Images ------*/
@@ -79,7 +79,7 @@ img {
   @include clean-list;
 
   label {
-    color: $black;
+    color: $dark-gray;
   }
 }
 
@@ -89,7 +89,7 @@ img {
   margin-bottom: 1.5rem;
 
   .styled-select--sort {
-    height: 40.2px;
+    background: $white;
     margin-top: 1rem;
     width: 230px;
 
@@ -153,36 +153,4 @@ img {
 
 .review__photo {
   height: 100px;
-}
-
-/*------ Prepend ------*/
-
-.prepend--location:before {
-  content: "\f041";
-  font-family: "FontAwesome";
-  margin-right: .25rem;
-}
-
-.prepend--phone:before {
-  content: "\f095";
-  font-family: "FontAwesome";
-  margin-right: .25rem;
-}
-
-.prepend--rating:before {
-  content: "\f087";
-  font-family: "FontAwesome";
-  margin-right: .25rem;
-}
-
-.prepend--reviews:before {
-  content: "\f0c0";
-  font-family: "FontAwesome";
-  margin-right: .25rem;
-}
-
-.prepend--plus:before {
-  content: "\f055";
-  font-family: "FontAwesome";
-  margin-right: .25rem;
 }

@@ -79,7 +79,7 @@
 }
 
 .card__special {
-  background: rgba(33, 33, 33, 0.5);
+  background: rgba(88, 88, 88, 0.6);
   color: $white;
   display: inline-block;
   font-size: .85rem;
@@ -95,8 +95,7 @@
   display: inline-block;
   font-size: 1rem;
   font-weight: $bold;
-  margin: 0;
-  margin-right: .5rem;
+  margin: 0 .5rem .75rem 0;
 }
 
 .card__class {
@@ -139,16 +138,11 @@
 /*------ Custom styles for large cards ------*/
 
 .card--large {
+  font-size: .85rem;
 
   .card__section {
-    font-size: .85rem;
-
     @media #{$large} {
       float: left;
-    }
-
-    @media #{$extra-large} {
-      font-size: 1rem;
     }
   }
 
@@ -166,10 +160,6 @@
       border-right: 1px solid $border-light;
       width: 20%;
     }
-
-    @media #{$extra-large} {
-      height: 200px;
-    }
   }
 
   .card__section--body {
@@ -178,7 +168,6 @@
 
     @media #{$large} {
       border-bottom: 0;
-      border-right: 1px solid $border-light;
       width: 55%;
     }
   }
@@ -188,6 +177,7 @@
     text-align: center;
 
     @media #{$large} {
+      border-left: 1px solid $border-light;
       width: 25%;
     }
   }
@@ -197,20 +187,19 @@
 
     @media #{$large} {
       border-bottom: 0;
-      border-right: 1px solid $border-light;
       width: 75%;
     }
 
     .row {
       border-bottom: 1px solid $border-light;
-      padding: 1.25rem 1rem;
+      padding: 1.2rem 1rem;
 
       &:last-of-type {
         border-bottom: 0;
       }
 
       @media #{$large} {
-        padding: 1.5rem 1rem;
+        padding: 1.55rem 1rem;
       }
     }
   }
@@ -233,16 +222,6 @@
   background-size: cover;
 }
 
-.aruba {
-  background: url("../../assets/images/cards/aruba.jpg") center no-repeat;
-  background-size: cover;
-}
-
-.st-thomas {
-  background: url("../../assets/images/cards/stthomas.jpg") center  no-repeat;
-  background-size: cover;
-}
-
 .nassau {
   background: url("../../assets/images/cards/nassau.jpg") center no-repeat;
   background-size: cover;
@@ -250,11 +229,6 @@
 
 .london {
   background: url("../../assets/images/cards/london.jpg") center no-repeat;
-  background-size: cover;
-}
-
-.paris {
-  background: url("../../assets/images/cards/paris.jpg") center no-repeat;
   background-size: cover;
 }
 

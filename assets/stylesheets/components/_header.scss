@@ -1,7 +1,7 @@
 /*------ Header ------*/
 
 header {
-  background: $dark-blue;
+  background: $black;
 }
 
 header .container {
@@ -85,7 +85,7 @@ header .container {
 
 .nav--mobile {
   @extend %clearfix;
-  background: darken($dark-blue, 4%);
+  background: darken($black, 4%);
   display: block;
 
   @media #{$medium} {

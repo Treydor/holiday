@@ -1,7 +1,8 @@
 /*------ Hero ------*/
 
 .hero {
-  background: url("../../assets/images/hero/hero.jpg") no-repeat;
+  background: $gray;
+  // background: url("../../assets/images/hero/hero.jpg") no-repeat;
   background-position: 50% 43%;
   background-size: cover;
 }
@@ -12,4 +13,8 @@
   @media #{$medium} {
     padding: 8rem 0;
   }
+}
+
+.hero__title {
+  color: $white;
 }

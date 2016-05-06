@@ -1,8 +1,9 @@
 /*------ Footer ------*/
 
 footer {
-  background: $dark-blue;
-  color: $white;
+  background: $white;
+  border-top: 1px solid $border-light;
+  color: $dark-gray;
 
   a {
     text-decoration: underline;

@@ -1,10 +1,11 @@
 /*------ Search form ------*/
 
 .search-table {
-  background: $dark-blue;
+  background: $white;
   border-radius: $border-radius;
+  color: $white;
   margin: 0 auto;
-  max-width: 620px;
+  max-width: 600px;
   padding: 1.5rem;
   overflow: hidden;
   width: 100%;
@@ -50,34 +51,15 @@
     }
   }
 
+  label {
+    font-size: .7rem;
+    font-weight: $bold;
+  }
+
   .label--clickable {
     font-size: .9rem;
-    margin-left: .5rem;
-
-
-
-    &:first-of-type {
-      margin-left: 0;
-    }
+    font-weight: $regular;
   }
-}
-
-.search__tab {
-  border-radius: $border-radius;
-  color: $white;
-  cursor: pointer;
-  float: left;
-  font-size: .8rem;
-  font-weight: $extra-bold;
-  letter-spacing: 1px;
-  margin-bottom: .75rem;
-  padding: .5rem 1rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.search__tab--current {
-  background: lighten($dark-blue, 5%);
 }
 
 /*------ Resuts top bar ------*/

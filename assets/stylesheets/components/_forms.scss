@@ -9,14 +9,19 @@ input[type="tel"],
 input[type="url"],
 input[type="time"],
 textarea {
-  background: $white;
-  border: 0;
+  background: $light-gray;
+  border: 1px solid $border-light;
   border-radius: $border-radius;
-  color: $black;
+  color: $dark-gray;
   font-size: .9rem;
   outline: none;
-  padding: .65rem;
+  padding: .7rem;
+  transition: border $cubic-bezier $duration;
   width: 100%;
+
+  &:focus {
+    border: 1px solid darken($border-light, 6%);
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -38,10 +43,10 @@ textarea {
 /*------ Custom Select  ------*/
 
 .styled-select {
-  background: $white;
+  background: $light-gray;
   border: 1px solid $border-light;
   border-radius: $border-radius;
-  height: 37.94px;
+  height: 40.75px;
   overflow: hidden;
   position: relative;
 
@@ -62,7 +67,7 @@ textarea {
   -webkit-appearance: none;
   background: transparent;
   border: 0;
-  color: $black;
+  color: $dark-gray;
   cursor: pointer;
   font-size: .9rem;
   height: 100%;
@@ -76,13 +81,13 @@ textarea {
 .styled-select:-moz-focusring {
   border: 0;
   color: transparent;
-  text-shadow: 0 0 0 $black;
+  text-shadow: 0 0 0 $dark-gray;
 }
 
 /*------ Labels  ------*/
 
 label {
-  color: $white;
+  color: $dark-gray;
   display: inline-block;
   font-size: .8rem;
   font-weight: $extra-bold;
@@ -101,7 +106,7 @@ label {
   -webkit-user-select: none;
   -ms-user-select: none;
 
-  input[type="checkbox"] {
+  input[type="checkbox"], input[type="radio"] {
     margin-right: .5rem;
   }
 }

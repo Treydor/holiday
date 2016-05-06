@@ -45,20 +45,20 @@
 
 .button--filter-toggle {
   background: $white;
-  border: 1px solid $border-light;
   border-radius: $border-radius;
+  border: 1px solid $border-light;
   color: lighten($gray, 10%);
   cursor: pointer;
   display: inline-block;
   font-size: .75rem;
   font-weight: $bold;
   letter-spacing: 1px;
-  padding: .6rem 1rem;
+  padding: .65rem .8rem;
   text-transform: uppercase;
   transition: $duration $cubic-bezier;
 
   &:before {
-    content: "\f013";
+    content: "\f0c9";
     font-family: "FontAwesome";
     font-weight: $regular;
     margin-right: .25rem;

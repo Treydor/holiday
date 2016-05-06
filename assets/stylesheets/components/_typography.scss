@@ -1,7 +1,7 @@
 /*------ Typography ------*/
 
 h1, h2, h3, h4 {
-  color: $black;
+  color: $dark-gray;
   font: $header-font;
   margin: 0;
 }
@@ -49,15 +49,58 @@ strong {
   font-weight: $bold;
 }
 
-.strike-through {
-  text-decoration: line-through;
+.user-rating {
+  &:after {
+    color: #ff7b7b;
+    content: "\f004";
+    font-family: "FontAwesome";
+    font-size: .9em;
+    margin-left: .25rem;
+  }
 }
 
-.important {
-  font-weight: $bold;
+.user-rating--inverse {
+  &:before {
+    color: #ff7b7b;
+    content: "\f004";
+    font-family: "FontAwesome";
+    font-size: .9em;
+    margin-right: .25rem;
+  }
+}
+
+.strike-through {
+  color: lighten($gray, 25%);
+  text-decoration: line-through;
 }
 
 .subtitle {
   color: $gray;
   font-size: .75rem;
+}
+
+/*------ Prepend ------*/
+
+.prepend--location:before {
+  content: "\f041";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--phone:before {
+  content: "\f095";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--reviews:before {
+  content: "\f0e6";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
+}
+
+.prepend--plus:before {
+  content: "\f055";
+  font-family: "FontAwesome";
+  margin-right: .25rem;
 }
