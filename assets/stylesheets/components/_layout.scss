@@ -87,17 +87,6 @@ img {
 
 .section__header {
   margin-bottom: 1.5rem;
-
-  .styled-select--sort {
-    background: $white;
-    margin-top: 1rem;
-    width: 230px;
-
-    @media #{$medium} {
-      float: right;
-      margin: 0;
-    }
-  }
 }
 
 .section__title {
