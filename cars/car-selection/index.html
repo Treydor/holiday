@@ -3,6 +3,32 @@ layout: default
 title: Holiday - Cars
 ---
 
+{% include search/packages/criteria.html %}
 <div class="container">
-  cars selection
+  <div class="section__header">
+    <h2 class="section__title">Displaying cars</h2>
+    <div class="row">
+      <span class="button--filter-toggle">Filter Results</span>
+      <div class="filter-box">
+        {% include filter-list/flights.html %}
+      </div>
+      <div class="styled-select styled-select--sort">
+        <select class="styled-select__list">
+          <option>Price (Lowest first)</option>
+          <option>Price (Highest first)</option>
+          <option>Departure (Earliest first)</option>
+          <option>Departure (Latest first)</option>
+          <option>Alphabetical (A-Z)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  Cards D:
 </div>
+
+<script>
+  $(".button--filter-toggle").click(function(e) {
+        e.preventDefault();
+        $(".filter-box").slideToggle("active");
+  });
+</script>
