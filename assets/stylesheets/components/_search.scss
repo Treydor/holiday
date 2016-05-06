@@ -59,12 +59,12 @@
 
 .search-results-top-bar {
   @extend %clearfix;
-  background: $light-green;
-  background: -webkit-linear-gradient(to top, lighten($light-green, 1%), darken($light-green, 3%));
-  background: linear-gradient(to top, lighten($light-green, 1%), darken($light-green, 3%));
-  border-bottom: 1px solid darken($light-green, 7%);
+  background: $white;
+  border-bottom: 1px solid $border-light;
+  color: $gray;
   font-size: .7rem;
   font-weight: $extra-bold;
+  letter-spacing: .5px;
   text-transform: uppercase;
 
   @media #{$medium} {
@@ -82,33 +82,52 @@
 }
 
 .search-criteria-list__item {
-  border-bottom: 1px solid darken($light-green, 7%);
+  border-right: 0;
+  border-bottom: 1px solid $border-light;
   float: left;
   padding: .75rem;
   text-align: center;
   width: 50%;
 
   &:nth-of-type(n+3) {
-    width: 25%;
+    display: none;
+  }
+
+  @media #{$medium} {
+    border-right: 1px solid $border-light;
+    border-bottom: 0;
+    height: 90px;
+    padding-top: 15px;
+  }
+
+  @media #{$large} {
+    width: 50%;
+  }
+
+  @media #{$extra-large} {
+    width: 22.5%;
+
+    &:nth-of-type(n+3) {
+      display: inline-block;
+      width: 13.5%;
+    }
   }
 
   i {
+    color: darken($gray, 10%);
     font-size: 1.2rem;
     margin-bottom: .5rem;
   }
 
-  @media #{$medium} {
-    border-bottom: 0;
-    border-right: 1px solid darken($light-green, 7%);
-    height: 90px;
-    padding: 0;
-    padding-top: 15px;
-    width: 22.5%;
-
-    &:nth-of-type(n+3) {
-      width: 13.75%;
-    }
+  p {
+    margin-bottom: 0;
   }
+}
+
+.search-criteria-list__item--larger {
+  color: darken($gray, 10%);
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 /*------ Search steps ------*/
@@ -124,7 +143,7 @@
 }
 
 .search-steps__line {
-  background: $light-gray;
+  background: darken($light-gray, 5%);
   border: 0;
   height: 2px;
   margin: 0 auto;
@@ -159,7 +178,7 @@
 }
 
 .search-steps__circle {
-  background: $light-gray;
+  background: darken($light-gray, 5%);
   border-radius: $circle;
   color: $gray;
   display: block;
@@ -176,12 +195,10 @@
   @extend .pulse;
   background: $blue;
   color: $white;
-  text-shadow: 1px 1px 1px #bbb;
 }
 
 .search-steps__circle--completed {
   background: $orange;
-  text-shadow: 1px 1px 1px #bbb;
   transition: transform $cubic-bezier .3s;
 
   &:before {
