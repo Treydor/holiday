@@ -195,7 +195,6 @@
   margin: 0 auto .25rem;
   text-align: center;
   width: 35px;
-
 }
 
 .search-steps__circle--current {
@@ -216,7 +215,7 @@
   }
 
   &:hover {
-    transform: scale(1.2);
     text-decoration: none;
+    transform: scale(1.2);
   }
 }
