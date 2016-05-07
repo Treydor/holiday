@@ -6,6 +6,10 @@ footer {
   color: $dark-gray;
 }
 
+footer .container {
+  padding: 5rem 0;
+}
+
 .footer__section {
   margin-bottom: 1rem;
 
@@ -30,6 +34,10 @@ footer {
   font-weight: $bold;
   margin-left: 3%;
 
+  a {
+    text-decoration: none;
+  }
+
   &:first-of-type {
     margin: 0;
   }
@@ -38,4 +46,9 @@ footer {
 .footer-list__item--icon {
   font-size: 1.75rem;
   font-weight: $regular;
+}
+
+.footer__sig {
+  display: inline-block;
+  margin-top: 2.5rem;
 }

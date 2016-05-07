@@ -107,6 +107,7 @@
   height: 34px;
   margin: 0 auto .5rem;;
   text-align: center;
+  text-decoration: none;
   width: 34px;
 }
 
@@ -118,7 +119,7 @@
 
 .search-steps__circle--completed {
   background: $green;
-  transition: transform $cubic-bezier .3s;
+  transition: transform $cubic-bezier .2s;
 
   &:before {
     color: $white;

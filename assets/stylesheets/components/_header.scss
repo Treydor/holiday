@@ -16,6 +16,7 @@ header .container {
   font-weight: $bold;
   line-height: 42px;
   margin-right: 2rem;
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;
@@ -41,6 +42,7 @@ header .container {
 
   a {
     color: $white;
+    text-decoration: none;
   }
 }
 
