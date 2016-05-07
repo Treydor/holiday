@@ -1,5 +1,5 @@
-<div class="search-table">
-  <form class="packages" action="{{ site.baseurl }}/cars/car-selection">
+<div class="form-table">
+  <form action="{{ site.baseurl }}/cars/car-selection">
     <div class="row">
       <div class="module module--6">
         <label>Picking up</label>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="module module--6">
+      <div class="module module--6-fixed">
         <div class="module module--6">
           <label>Pick up day</label>
           <input type="text" placeholder="mm/dd/yyyy">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="module module--6">
+      <div class="module module--6-fixed">
         <div class="module module--6">
           <label>Drop off day</label>
           <input type="text" placeholder="mm/dd/yyyy">
@@ -54,8 +54,8 @@
         </div>
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="module module--6">
+    <div class="row">
+      <div class="module module--6-fixed">
         <label>Vehicle type</label>
         <div class="styled-select">
           <select class="styled-select__list">
@@ -72,7 +72,7 @@
           </select>
         </div>
       </div>
-      <div class="module module--6">
+      <div class="module module--6-fixed">
         <label>Company</label>
         <div class="styled-select">
           <select class="styled-select__list">
@@ -85,13 +85,8 @@
           </select>
         </div>
       </div>
-    </div> -->
-    <div class="row">
-      <label class="label--clickable">
-        <input type="checkbox">I am over the age of 18
-      </label>
     </div>
-    <div class="row add-margin-top">
+    <div class="row">
       <button class="button button--primary">Search</button>
     </div>
   </form>

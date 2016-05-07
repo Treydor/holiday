@@ -1,5 +1,5 @@
-<div class="search-table">
-  <form class="packages" action="{{ site.baseurl }}/packages/package-selection/hotels/">
+<div class="form-table">
+  <form action="{{ site.baseurl }}/packages/package-selection/hotels/">
     <div class="row">
       <div class="module module--6">
         <label>Flying from</label>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="module module--6">
-        <div class="module module--4">
+        <div class="module module--4-fixed">
           <label>Rooms</label>
           <div class="styled-select">
             <select class="styled-select__list">
@@ -32,7 +32,7 @@
             </select>
           </div>
         </div>
-        <div class="module module--4">
+        <div class="module module--4-fixed">
           <label>Adults</label>
           <div class="styled-select">
             <select class="styled-select__list">
@@ -45,7 +45,7 @@
             </select>
           </div>
         </div>
-        <div class="module module--4">
+        <div class="module module--4-fixed">
           <label>Children</label>
           <div class="styled-select">
             <select class="styled-select__list">
@@ -62,11 +62,6 @@
       </div>
     </div>
     <div class="row">
-      <label class="label--clickable">
-        <input type="checkbox">Search nonstop flights only
-      </label>
-    </div>
-    <div class="row add-margin-top">
       <button class="button button--primary">Search</button>
     </div>
   </form>
