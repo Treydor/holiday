@@ -6,41 +6,36 @@ footer {
   color: $dark-gray;
 }
 
-.footer-section {
-  margin-bottom: 1.5rem;
+.footer__section {
+  margin-bottom: 1rem;
 
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
-/*------ Footer Title ------*/
-
-.footer-title {
-  color: $white;
-  font-size: .9rem;
-  margin-bottom: .7rem;
+.footer__logo {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: $bold;
 }
 
-/*------ Footer Lists ------*/
-
-.footer-menu, .social-menu {
+.footer-list {
+  @extend %clearfix;
   @include clean-list;
 }
 
-.footer-menu__link, .social-menu__link {
-  text-decoration: none;
-}
-
-.social-menu__item {
-  display: inline-block;
-  margin-left: 1.5rem;
+.footer-list__item {
+  float: left;
+  font-weight: $bold;
+  margin-left: 3%;
 
   &:first-of-type {
-    margin-left: 0;
+    margin: 0;
   }
 }
 
-.social-menu__icon {
-  font-size: 1.4rem;
+.footer-list__item--icon {
+  font-size: 1.75rem;
+  font-weight: $regular;
 }
