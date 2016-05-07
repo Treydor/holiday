@@ -36,10 +36,18 @@ img {
   width: 90%;
 }
 
+.container--narrow {
+  max-width: 600px
+}
+
 /*------ Section ------*/
 
 .section__header {
   margin-bottom: 1.5rem;
+
+  p {
+    margin: 0;
+  }
 }
 
 .section__title {
