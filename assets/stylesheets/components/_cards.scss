@@ -197,7 +197,7 @@
     @media #{$large} {
       border-bottom: 0;
       border-right: 1px solid $border-light;
-      width: 20%;
+      width: 25%;
     }
   }
 }
@@ -208,7 +208,7 @@
 
   @media #{$large} {
     border-bottom: 0;
-    width: 55%;
+    width: 50%;
   }
 }
 
@@ -290,4 +290,15 @@
 
 .car {
   background: url("../../assets/images/cards/car.jpg") center no-repeat;
+}
+
+.hotel {
+  background: url("../../assets/images/cards/hotel.jpg") center no-repeat;
+  background-position: 50% 70%;
+  background-size: cover;
+}
+
+.hotel-room {
+  background: url("../../assets/images/cards/hotel-room.jpg") center no-repeat;
+  background-size: cover;
 }
