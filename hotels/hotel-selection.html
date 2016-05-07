@@ -1,14 +1,16 @@
 ---
 layout: default
-title: Holiday - Packages
+title: Holiday - Hotels
+permalink: /hotels/hotel-selection/
+group: hotels
 ---
 
-{% include search/packages/criteria.html %}
+{% include search/hotels/criteria.html %}
 
 <section class="results">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title">Displaying flights from MKE to MCO</h2>
+      <h2 class="section__title">Displaying hotels in Orlando, FL</h2>
       <div class="row">
         <span class="button--filter-toggle">Filter Results</span>
         <div class="filter-box">
@@ -16,16 +18,18 @@ title: Holiday - Packages
         </div>
         <div class="styled-select styled-select--sort">
           <select class="styled-select__list">
-            <option>Price (Lowest first)</option>
-            <option>Price (Highest first)</option>
-            <option>Departure (Earliest first)</option>
-            <option>Departure (Latest first)</option>
+            <option selected="selected">Average rate (Lowest first)</option>
+            <option>Average rate (Highest first)</option>
+            <option>Hotel class (Lowest first)</option>
+            <option>Hotel class (Highest first)</option>
+            <option>Guest Rating (Lowest first)</option>
+            <option>Guest Rating (Highest first)</option>
             <option>Alphabetical (A-Z)</option>
           </select>
         </div>
       </div>
     </div>
-    {% include search/packages/results-flights.html %}
+    {% include search/hotels/results-hotels.html %}
   </div>
 </section>
 

@@ -1,18 +1,20 @@
 ---
 layout: default
-title: Holiday - Flights
+title: Holiday - Packages
+permalink: /packages/package-selection/flights/
+group: packages
 ---
 
-{% include search/flights/criteria.html %}
+{% include search/packages/criteria2.html %}
 
 <section class="results">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title">Displaying roundtrip flights from MKE to MCO</h2>
+      <h2 class="section__title">Displaying flights from MKE to MCO</h2>
       <div class="row">
         <span class="button--filter-toggle">Filter Results</span>
         <div class="filter-box">
-          {% include filter-list/flights.html %}
+          {% include filter-list/hotels.html %}
         </div>
         <div class="styled-select styled-select--sort">
           <select class="styled-select__list">
@@ -25,7 +27,7 @@ title: Holiday - Flights
         </div>
       </div>
     </div>
-    {% include search/flights/results-flights.html %}
+    {% include search/packages/results-flights.html %}
   </div>
 </section>
 

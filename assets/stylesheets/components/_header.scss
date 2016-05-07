@@ -39,20 +39,26 @@ header .container {
   &:first-of-type {
     margin-left: 0;
   }
+}
 
-  a {
-    color: $white;
+.nav-list__link {
+  color: $white;
+  text-decoration: none;
+  transition: color $duration $cubic-bezier;
+
+  &:hover {
+    color: lighten($gray, 30%);
     text-decoration: none;
   }
 }
 
-.nav-list__item--current {
-  font-weight: $extra-bold;
+.nav-list__link--current {
+  color: lighten($gray, 30%);
 }
 
 /*------ User Account ------*/
 
-.user {
+.nav__user {
   color: $white;
   display: inline-block;
   line-height: 39px;
