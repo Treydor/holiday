@@ -3,30 +3,33 @@ layout: default
 title: Holiday - Hotels
 ---
 
-{% include search/packages/criteria.html %}
-<div class="container">
-  <div class="section__header">
-    <h2 class="section__title">Displaying hotels in Orlando, FL</h2>
-    <div class="row">
-      <span class="button--filter-toggle">Filter Results</span>
-      <div class="filter-box">
-        {% include filter-list/hotels.html %}
-      </div>
-      <div class="styled-select styled-select--sort">
-        <select class="styled-select__list">
-          <option value="price-low">Price (Lowest first)</option>
-          <option value="price-high">Price (Highest first)</option>
-          <option value="price-high">Hotel class (Lowest first)</option>
-          <option value="price-high">Hotel class (Highest first)</option>
-          <option value="rating">Guest Rating (Lowest first)</option>
-          <option value="rating">Guest Rating (Highest first)</option>
-          <option value="alpha">Alphabetical (A-Z)</option>
-        </select>
+{% include search/hotels/criteria.html %}
+
+<section class="results">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Displaying hotels in Orlando, FL</h2>
+      <div class="row">
+        <span class="button--filter-toggle">Filter Results</span>
+        <div class="filter-box">
+          {% include filter-list/hotels.html %}
+        </div>
+        <div class="styled-select styled-select--sort">
+          <select class="styled-select__list">
+            <option selected="selected">Average rate (Lowest first)</option>
+            <option>Average rate (Highest first)</option>
+            <option>Hotel class (Lowest first)</option>
+            <option>Hotel class (Highest first)</option>
+            <option>Guest Rating (Lowest first)</option>
+            <option>Guest Rating (Highest first)</option>
+            <option>Alphabetical (A-Z)</option>
+          </select>
+        </div>
       </div>
     </div>
+    {% include search/hotels/results-hotels.html %}
   </div>
-  {% include search/hotels/results-hotels.html %}
-</div>
+</section>
 
 <script>
   $(".button--filter-toggle").click(function(e) {

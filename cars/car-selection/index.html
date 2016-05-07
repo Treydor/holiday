@@ -3,25 +3,30 @@ layout: default
 title: Holiday - Cars
 ---
 
-{% include search/packages/criteria.html %}
-<div class="container">
-  <div class="section__header">
-    <h2 class="section__title">Displaying cars</h2>
-    <div class="row">
-      <span class="button--filter-toggle">Filter Results</span>
-      <div class="filter-box">
-        {% include filter-list/cars.html %}
-      </div>
-      <div class="styled-select styled-select--sort">
-        <select class="styled-select__list">
-          <option>Price (Lowest first)</option>
-          <option>Price (Highest first)</option>
-        </select>
+{% include search/cars/criteria.html %}
+
+<section class="results">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Displaying rental cars in Orlando, FL</h2>
+      <div class="row">
+        <span class="button--filter-toggle">Filter Results</span>
+        <div class="filter-box">
+          {% include filter-list/cars.html %}
+        </div>
+        <div class="styled-select styled-select--sort">
+          <select class="styled-select__list">
+            <option selected="selected">Daily price (Lowest first)</option>
+            <option>Daily price (Highest first)</option>
+            <option>Rental car company</option>
+            <option>Vehicle type</option>
+          </select>
+        </div>
       </div>
     </div>
+    {% include search/cars/results-cars.html %}
   </div>
-  Cards D:
-</div>
+</section>
 
 <script>
   $(".button--filter-toggle").click(function(e) {

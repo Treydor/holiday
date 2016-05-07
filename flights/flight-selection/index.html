@@ -3,28 +3,31 @@ layout: default
 title: Holiday - Flights
 ---
 
-{% include search/packages/criteria.html %}
-<div class="container">
-  <div class="section__header">
-    <h2 class="section__title">Displaying roundtrip flights from MKE to MCO</h2>
-    <div class="row">
-      <span class="button--filter-toggle">Filter Results</span>
-      <div class="filter-box">
-        {% include filter-list/flights.html %}
-      </div>
-      <div class="styled-select styled-select--sort">
-        <select class="styled-select__list">
-          <option>Price (Lowest first)</option>
-          <option>Price (Highest first)</option>
-          <option>Departure (Earliest first)</option>
-          <option>Departure (Latest first)</option>
-          <option>Alphabetical (A-Z)</option>
-        </select>
+{% include search/flights/criteria.html %}
+
+<section class="results">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Displaying roundtrip flights from MKE to MCO</h2>
+      <div class="row">
+        <span class="button--filter-toggle">Filter Results</span>
+        <div class="filter-box">
+          {% include filter-list/flights.html %}
+        </div>
+        <div class="styled-select styled-select--sort">
+          <select class="styled-select__list">
+            <option>Price (Lowest first)</option>
+            <option>Price (Highest first)</option>
+            <option>Departure (Earliest first)</option>
+            <option>Departure (Latest first)</option>
+            <option>Alphabetical (A-Z)</option>
+          </select>
+        </div>
       </div>
     </div>
+    {% include search/flights/results-flights.html %}
   </div>
-  {% include search/flights/results-flights.html %}
-</div>
+</section>
 
 <script>
   $(".button--filter-toggle").click(function(e) {
