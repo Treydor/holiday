@@ -69,7 +69,6 @@
   @extend %clearfix;
   border-bottom: 1px solid $border-light;
   padding: .5rem;
-  white-space: nowrap;
 
   &:last-of-type {
     border-bottom: 0;
