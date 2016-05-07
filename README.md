@@ -1,28 +1,31 @@
-# Holiday Travel project
-Created by [Noah Rogers](http://treydor.github.io).
+# Holiday travel project
+Created by [Noah Rogers](http://noaharogers.github.io).
 
-### Requirements
-* Create a simple travel website
-* Demonstrate HTML5, CSS and Sass knowledge
-* Demonstrate design, color, typography and branding sense
+Holiday is a static travel website that specializes in bundled packages as well as hotel, flights and rental car reservations. This project is a way for me to demonstrate what I've learned during my [8th Light](http://www.8thlight.com) Apprenticeship over the last several months.
 
-### Bonus (for me)
-* Make it responsive
-* Commit regularly
+## Set up
 
-## Viewing the project
+##### Clone the repository
+```
+HTTPS: git@github.com:noaharogers/holiday.git
+```
+
+##### Change directory to Holiday
+```
+cd holiday
+```
 
 ##### Install Jekyll
 ```
 bundle install
 ```
 
-##### Start server
+##### Start the server
 ```
 jekyll serve
 ```
 
-##### Visiting the project
+##### View the project locally
 ```
 localhost:4000/holiday/
 ```
