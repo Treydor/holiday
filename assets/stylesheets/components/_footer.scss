@@ -3,7 +3,7 @@
 footer {
   background: $white;
   border-top: 1px solid $border-light;
-  color: $dark-gray;
+  color: $gray;
 }
 
 footer .container {
@@ -51,6 +51,11 @@ footer .container {
 
   a {
     text-decoration: none;
+    transition: color $duration $cubic-bezier;
+
+    &:hover {
+      color: $dark-gray;
+    }
   }
 }
 
@@ -59,6 +64,11 @@ footer .container {
   font-size: 1.75rem;
   font-weight: $regular;
   margin-left: 5%;
+  transition: color $duration $cubic-bezier;
+
+  &:hover {
+    color: $dark-gray;
+  }
 
   &:first-of-type {
     margin-left: 0;
