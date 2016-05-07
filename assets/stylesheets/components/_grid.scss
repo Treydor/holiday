@@ -7,6 +7,8 @@
 /*------ Module ------*/
 
 .module {
+  position: relative;
+
   @media #{$medium} {
     float: left;
   }
@@ -26,9 +28,21 @@
   }
 }
 
+.module--5 {
+  @media #{$medium} {
+    width: 40%;
+  }
+}
+
 .module--6 {
   @media #{$medium} {
     width: 50%;
+  }
+}
+
+.module--7 {
+  @media #{$medium} {
+    width: 60%;
   }
 }
 
@@ -62,25 +76,16 @@
 
 .module--6-fixed {
   float: left;
-  width: 50%;
+  margin-left: 3%;
+  width: 48.5%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
 }
 
 /*------ Module modifiers ------*/
 
-.module--center {
-  text-align: center;
-}
-
 .module--right {
   text-align: right;
-}
-
-.module--add-padding {
-  padding: 1rem;
-}
-
-.module--photo {
-  background: url("../../assets/images/cards/berlin.jpg") center no-repeat;
-  background-size: cover;
-  height: 190px;
 }

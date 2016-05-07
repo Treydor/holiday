@@ -1,225 +1,99 @@
-/*------ Search form ------*/
+/*------ Resuts top bar ------*/
 
-.search-table {
+.top-bar {
+  @extend %clearfix;
   background: $white;
-  border-radius: $border-radius;
-  color: $white;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 1.5rem;
-  overflow: hidden;
-  width: 100%;
-
-  .row {
-    @media #{$medium} {
-      margin-bottom: .75rem;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .module {
-    margin-bottom: .75rem;
-
-    @media #{$medium} {
-      margin-bottom: 0;
-    }
-  }
-
-  .module--6 {
-    width: 100%;
-
-    @media #{$medium} {
-      margin-left: 3%;
-      width: 48.5%;
-
-      &:first-of-type {
-        margin-left: 0;
-      }
-    }
-  }
-
-  .module--4 {
-    float: left;
-    margin-left: 5%;
-    width: 30%;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
-  }
-
-  label {
-    font-size: .7rem;
-    font-weight: $bold;
-  }
-
-  .label--clickable {
-    font-size: .9rem;
-    font-weight: $regular;
-  }
+  border-bottom: 1px solid $border-light;
+  color: $gray;
+  font-size: .9rem;
 }
 
-.flight-search-tabs {
+.top-bar .container {
+  padding: 1rem 0;
+  position: relative;
+}
+
+.search-criteria {
   @extend %clearfix;
   @include clean-list;
-  border: 1px solid $border-light;
-  border-radius: $border-radius;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   @media #{$medium} {
     margin-bottom: 0;
-  }
-}
-
-.flight-search-tabs__item {
-  border-left: 1px solid $border-light;
-  color: $gray;
-  cursor: pointer;
-  float: left;
-  font-size: .9rem;
-  padding: .6rem;
-  text-align: center;
-  transition: background $duration $cubic-bezier;
-  width: 33.33%;
-
-  &:first-of-type {
-    border-left: 0;
-  }
-
-  &:hover {
-    background: $light-gray;
-  }
-}
-
-.flight-search-tabs__item--current {
-  background: $light-gray;
-  color: $black;
-  transition: $duration $cubic-bezier;
-}
-
-/*------ Resuts top bar ------*/
-
-.search-results-top-bar {
-  @extend %clearfix;
-  background: $white;
-  border-bottom: 1px solid $border-light;
-  color: $gray;
-  font-size: .7rem;
-  font-weight: $extra-bold;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-
-  @media #{$medium} {
-    height: 90px;
-    position: relative;
-    z-index: 999;
-  }
-}
-
-/*------ Search criteria ------*/
-
-.search-criteria-list {
-  @extend %clearfix;
-  @include clean-list;
-}
-
-.search-criteria-list__item {
-  border-right: 0;
-  border-bottom: 1px solid $border-light;
-  float: left;
-  padding: .75rem;
-  text-align: center;
-  width: 50%;
-
-  &:nth-of-type(n+3) {
-    display: none;
-  }
-
-  @media #{$medium} {
-    border-right: 1px solid $border-light;
-    border-bottom: 0;
-    height: 90px;
-    padding-top: 15px;
-  }
-
-  @media #{$large} {
-    width: 50%;
   }
 
   @media #{$extra-large} {
-    width: 22.5%;
-
-    &:nth-of-type(n+3) {
-      display: inline-block;
-      width: 13.5%;
-    }
-  }
-
-  i {
-    color: darken($gray, 10%);
-    font-size: 1.2rem;
-    margin-bottom: .5rem;
-  }
-
-  p {
-    margin-bottom: 0;
+    position: relative;
+    top: 17px;
   }
 }
 
-.search-criteria-list__item--larger {
-  color: darken($gray, 10%);
-  font-size: 1rem;
-  margin-top: 10px;
+.search-criteria__item {
+  color: lighten($gray, 10%);
+
+  @media #{$extra-large} {
+    border-left: 1px solid $border-light;
+    float: left;
+    margin-left: .5rem;
+    padding-left: .5rem;
+
+    &:first-of-type {
+      border-left: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
 }
 
 /*------ Search steps ------*/
-
-.search-steps {
-  position: relative;
-  height: 100px;
-
-  @media #{$medium} {
-    height: 80px;
-    width: 100%;
-  }
-}
 
 .search-steps__line {
   background: darken($light-gray, 5%);
   border: 0;
   height: 2px;
-  margin: 0 auto;
-  position: absolute;
-  top: 38px;
   left: 0;
+  margin: auto;
+  position: absolute;
   right: 0;
-  bottom: 0;
-  width: 75%;
+  top: 17px;
+  width: 72%;
   z-index: 1;
 
   @media #{$medium} {
-    margin: auto;
-    top: 0;
-    bottom: 0;
+    top: 32px;
+  }
+
+  @media #{$extra-large} {
+    top: 17px;
   }
 }
 
 .search-steps__list {
   @extend %clearfix;
   @include clean-list;
-  position: relative;
 }
 
 .search-steps__item {
   float: left;
   position: relative;
   text-align: center;
-  top: 20px;
-  width: 25%;
   z-index: 2;
+
+  @media #{$medium} {
+    top: 17px;
+  }
+
+  @media #{$extra-large} {
+    top: 0;
+  }
+}
+
+.search-steps__item--4 {
+  width: 25%;
+}
+
+.search-steps__item--3 {
+  width: 33.33%;
 }
 
 .search-steps__circle {
@@ -227,12 +101,13 @@
   border-radius: $circle;
   color: $gray;
   display: block;
-  font-size: 1.2em;
-  line-height: 35px;
-  height: 35px;
-  margin: 0 auto .25rem;
+  font-size: .8rem;
+  font-weight: $extra-bold;
+  line-height: 34px;
+  height: 34px;
+  margin: 0 auto .5rem;;
   text-align: center;
-  width: 35px;
+  width: 34px;
 }
 
 .search-steps__circle--current {
@@ -255,5 +130,112 @@
   &:hover {
     text-decoration: none;
     transform: scale(1.2);
+  }
+}
+
+.search-steps__caption {
+  font-size: .7rem;
+  font-weight: $extra-bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/*------ Search filters ------*/
+
+.filter-box {
+  background: $white;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
+  display: none;
+  margin-top: 1rem;
+  max-width: 500px;
+  position: absolute;
+  z-index: 999;
+  width: 90%;
+
+  .row {
+    border-bottom: 1px solid $border-light;
+    padding: 1.5rem;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+
+  .module {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media #{$medium} {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.filter-box__header {
+  margin-bottom: .5rem;
+}
+
+.filter-box__list {
+  @include clean-list;
+
+  label {
+    color: $dark-gray;
+  }
+}
+
+/*------ Review ------*/
+
+.review {
+
+  .module--6 {
+    margin-bottom: 1.5rem;
+
+    @media #{$medium} {
+      width: 100%;
+    }
+
+    @media #{$large} {
+      margin-left: 3%;
+      width: 48.5%;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+   margin-bottom: 0;
+  }
+}
+
+.review__title {
+  margin-bottom: 1rem;
+}
+
+.review__group {
+  margin-bottom: 1.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.review__summary {
+  background: $white;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
+  padding: 1.5rem;
+
+  .button {
+    text-align: center;
   }
 }

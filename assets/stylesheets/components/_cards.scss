@@ -29,7 +29,7 @@
   }
 }
 
-/*------ Card Styles ------*/
+/*------ Card ------*/
 
 .card {
   background: $white;
@@ -40,6 +40,10 @@
   overflow: hidden;
   position: relative;
   transition: transform $cubic-bezier $duration;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   &:hover {
     border: 1px solid darken($border-light, 5%);
@@ -53,11 +57,6 @@
 
 /*------ Card Structure ------*/
 
-.card__photo {
-  background-size: cover;
-  height: 225px;
-}
-
 .card__section {
   @extend %clearfix;
   border-bottom: 1px solid $border-light;
@@ -65,6 +64,19 @@
 
   &:last-of-type {
     border-bottom: 0;
+  }
+}
+
+.card__photo {
+  background-size: cover;
+  height: 225px;
+  position: relative;
+
+  img {
+    @include complete-center;
+    max-height: 185px;
+    max-width: 280px;
+    width: 90%;
   }
 }
 
@@ -82,13 +94,14 @@
   background: rgba(88, 88, 88, 0.6);
   color: $white;
   display: inline-block;
-  font-size: .85rem;
+  font-size: .75rem;
   font-weight: $bold;
   letter-spacing: 1px;
   right: 0;
   padding: .5rem 1rem;
   position: absolute;
   text-transform: uppercase;
+  z-index: 3;
 }
 
 .card__name {
@@ -130,25 +143,43 @@
   margin: 0;
 }
 
-.card__total {
-  margin-bottom: 1rem;
-  text-align: center;
+.card__sub-text {
+  color: $gray;
+  font-size: .7rem;
+  font-weight: $bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/*------ Large card ------*/
+/*------ Card small ------*/
+
+.card--small {
+  text-align: center;
+
+  .card__section {
+    padding: 1rem;
+  }
+
+  .card__photo {
+    border-bottom: 1px solid $border-light;
+  }
+}
+
+/*------ Card large ------*/
 
 .card--large {
   font-size: .85rem;
 
   .card__section {
+
     @media #{$large} {
       float: left;
     }
   }
 
-  .card__section--photo {
+  .card__photo {
     border-bottom: 1px solid $border-light;
-    height: 180px;
+    height: 188px;
 
     @media #{$medium} {
       background-size: cover;
@@ -161,46 +192,58 @@
       width: 20%;
     }
   }
+}
 
-  .card__section--body {
+.card__section--body {
+  border-bottom: 1px solid $border-light;
+  padding: 1rem;
+
+  @media #{$large} {
+    border-bottom: 0;
+    width: 55%;
+  }
+}
+
+.card__section--action {
+  padding: 1rem;
+  text-align: center;
+
+  @media #{$large} {
+    border-left: 1px solid $border-light;
+    width: 25%;
+  }
+}
+
+.card__section--wide {
+  padding: 0;
+
+  @media #{$large} {
+    border-bottom: 0;
+    width: 75%;
+  }
+
+  .row {
     border-bottom: 1px solid $border-light;
-    padding: 1rem;
+    padding: 1.2rem 1rem;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
 
     @media #{$large} {
-      border-bottom: 0;
-      width: 55%;
+      padding: 1.55rem;
     }
   }
 
-  .card__section--action {
-    padding: 1rem;
-    text-align: center;
+  .module {
+    margin-bottom: 1rem;
 
-    @media #{$large} {
-      border-left: 1px solid $border-light;
-      width: 25%;
-    }
-  }
-
-  .card__section--large {
-    padding: 0;
-
-    @media #{$large} {
-      border-bottom: 0;
-      width: 75%;
+    &:last-of-type {
+      margin-bottom: 0;
     }
 
-    .row {
-      border-bottom: 1px solid $border-light;
-      padding: 1.2rem 1rem;
-
-      &:last-of-type {
-        border-bottom: 0;
-      }
-
-      @media #{$large} {
-        padding: 1.55rem 1rem;
-      }
+    @media #{$medium} {
+      margin: 0;
     }
   }
 }
@@ -235,4 +278,8 @@
 .berlin {
   background: url("../../assets/images/cards/berlin.jpg") center no-repeat;
   background-size: cover;
+}
+
+.car {
+  background: url("../../assets/images/cards/car.jpg") center no-repeat;
 }
