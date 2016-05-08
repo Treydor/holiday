@@ -12,21 +12,21 @@ group: packages
     <div class="section__header">
       <h2 class="section__title">Displaying hotels in Orlando, FL</h2>
       <div class="row">
-        <span class="button--filter-toggle">Filter Results</span>
-        <div class="filter-box">
-          {% include filter-list/hotels.html %}
+        <div class="filter">
+          <div class="filter__toggle">Filter Results</div>
+          <div class="filter__box">
+            {% include filter-list/hotels.html %}
+          </div>
         </div>
-        <div class="styled-select styled-select--sort">
-          <select class="styled-select__list">
-            <option value="price-low">Price (Lowest first)</option>
-            <option value="price-high">Price (Highest first)</option>
-            <option value="price-high">Hotel class (Lowest first)</option>
-            <option value="price-high">Hotel class (Highest first)</option>
-            <option value="rating">Guest Rating (Lowest first)</option>
-            <option value="rating">Guest Rating (Highest first)</option>
-            <option value="alpha">Alphabetical (A-Z)</option>
-          </select>
-        </div>
+        <select class="select--fixed-right">
+          <option value="price-low">Price (Lowest first)</option>
+          <option value="price-high">Price (Highest first)</option>
+          <option value="price-high">Hotel class (Lowest first)</option>
+          <option value="price-high">Hotel class (Highest first)</option>
+          <option value="rating">Guest Rating (Lowest first)</option>
+          <option value="rating">Guest Rating (Highest first)</option>
+          <option value="alpha">Alphabetical (A-Z)</option>
+        </select>
       </div>
     </div>
     {% include search/packages/results-hotels.html %}
@@ -34,8 +34,8 @@ group: packages
 </section>
 
 <script>
-  $(".button--filter-toggle").click(function(e) {
+  $(".filter__toggle").click(function(e) {
         e.preventDefault();
-        $(".filter-box").slideToggle("active");
+        $(".filter__box").slideToggle("active");
   });
 </script>

@@ -141,18 +141,51 @@
   text-transform: uppercase;
 }
 
-/*------ Search filters ------*/
+/*------  Filters ------*/
 
-.filter-box {
+.filter__toggle {
+  background: $white;
+  border-radius: $border-radius;
+  border: 1px solid $border-light;
+  color: lighten($dark-gray, 10%);
+  cursor: pointer;
+  display: block;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  padding: .5rem .7rem;
+  transition: $duration $cubic-bezier;
+
+  @media #{$medium} {
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+
+  &:before {
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    margin-right: .5rem;
+  }
+
+  &:hover {
+    border: 1px solid darken($border-light, 6%);
+    color: darken($gray, 10%);
+  }
+}
+
+.filter__box {
   background: $white;
   border: 1px solid $border-light;
   border-radius: $border-radius;
   display: none;
-  margin-top: 1rem;
   max-width: 500px;
   position: absolute;
   z-index: 999;
   width: 90%;
+
+  @media #{$medium} {
+    margin-top: 3rem;
+  }
 
   .row {
     border-bottom: 1px solid $border-light;

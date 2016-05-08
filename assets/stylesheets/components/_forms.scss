@@ -41,61 +41,43 @@ textarea {
 
 /*------ Custom Select  ------*/
 
-.styled-select {
-  background: $white;
-  border: 1px solid $border-light;
-  border-radius: $border-radius;
-  height: 40.75px;
-  overflow: hidden;
-  position: relative;
-
-  &:after {
-    @include vertical-align;
-    content: "\f107";
-    color: $gray;
-    font-family: "FontAwesome";
-    font-size: 1.2rem;
-    line-height: normal;
-    right: .7rem;
-    z-index: 1;
-  }
-}
-
-.styled-select--sort {
-  background: $white;
-  margin-top: 1rem;
-  width: 230px;
-
-  @media #{$medium} {
-    float: right;
-    margin: 0;
-  }
-}
-
-.styled-select__list {
+select {
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: transparent;
-  border: 0;
+  background: $white url("../../assets/images/down-arrow.svg") no-repeat;
+  background-position: center right 12px;
+  background-size: auto 6px;
+  border: 1px solid $border-light;
+  border-radius: $border-radius;
   color: $dark-gray;
   cursor: pointer;
   font-size: .9rem;
-  height: 100%;
+  line-height: normal;
   outline: 0;
-  padding: 0 .7rem;
-  position: relative;
+  padding: .7rem;
   width: 100%;
-  z-index: 2;
+
+  @media #{$medium} {
+    padding: .65rem .7rem;
+  }
 }
 
-.styled-select__list::-ms-expand {
+select::-ms-expand {
     display: none;
 }
 
-.styled-select__list:-moz-focusring {
+select:-moz-focusring {
   border: 0;
   color: transparent;
   text-shadow: 0 0 0 $dark-gray;
+}
+
+.select--fixed-right {
+  @media #{$medium} {
+    float: right;
+    margin: 0;
+    width: 220px;
+  }
 }
 
 /*------ Labels  ------*/

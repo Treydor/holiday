@@ -17,24 +17,15 @@ group: hotels
           <p>(800) 559-5559</p>
         </div>
         <div class="module module--6">
-          <div class="styled-select styled-select--sort">
-            <select class="styled-select__list">
-              <option selected="selected">Nightly rate (Lowest first)</option>
-              <option>Nightly rate (Highest first)</option>
-              <option>Square footage</option>
-              <option>Beds</option>
-            </select>
-          </div>
+          <select class="select--fixed-right">
+            <option selected="selected">Nightly rate (Lowest first)</option>
+            <option>Nightly rate (Highest first)</option>
+            <option>Square footage</option>
+            <option>Beds</option>
+          </select>
         </div>
       </div>
     </div>
     {% include search/hotels/results-rooms.html %}
   </div>
 </section>
-
-<script>
-  $(".button--filter-toggle").click(function(e) {
-        e.preventDefault();
-        $(".filter-box").slideToggle("active");
-  });
-</script>

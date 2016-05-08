@@ -12,18 +12,18 @@ group: cars
     <div class="section__header">
       <h2 class="section__title">Displaying rental cars in Orlando, FL</h2>
       <div class="row">
-        <span class="button--filter-toggle">Filter Results</span>
-        <div class="filter-box">
-          {% include filter-list/cars.html %}
+        <div class="filter">
+          <div class="filter__toggle">Filter Results</div>
+          <div class="filter__box">
+            {% include filter-list/cars.html %}
+          </div>
         </div>
-        <div class="styled-select styled-select--sort">
-          <select class="styled-select__list">
-            <option selected="selected">Daily price (Lowest first)</option>
-            <option>Daily price (Highest first)</option>
-            <option>Rental car company</option>
-            <option>Vehicle type</option>
-          </select>
-        </div>
+        <select class="select--fixed-right">
+          <option selected="selected">Daily price (Lowest first)</option>
+          <option>Daily price (Highest first)</option>
+          <option>Rental car company</option>
+          <option>Vehicle type</option>
+        </select>
       </div>
     </div>
     {% include search/cars/results-cars.html %}
@@ -31,8 +31,8 @@ group: cars
 </section>
 
 <script>
-  $(".button--filter-toggle").click(function(e) {
+  $(".filter__toggle").click(function(e) {
         e.preventDefault();
-        $(".filter-box").slideToggle("active");
+        $(".filter__box").slideToggle("active");
   });
 </script>

@@ -43,31 +43,3 @@
   cursor: pointer;
   text-align: center;
 }
-
-.button--filter-toggle {
-  background: $white;
-  border-radius: $border-radius;
-  border: 1px solid $border-light;
-  color: lighten($gray, 10%);
-  cursor: pointer;
-  display: inline-block;
-  font-size: .75rem;
-  font-weight: $bold;
-  letter-spacing: 1px;
-  padding: .65rem .8rem .6rem;
-  text-transform: uppercase;
-  transition: $duration $cubic-bezier;
-
-  &:before {
-    content: "\f0c9";
-    font-family: "FontAwesome";
-    font-size: .8rem;
-    font-weight: $regular;
-    margin-right: .5rem;
-  }
-
-  &:hover {
-    border: 1px solid darken($border-light, 6%);
-    color: darken($gray, 10%);
-  }
-}
