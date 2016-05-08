@@ -24,7 +24,9 @@
 }
 
 @mixin vertical-align {
+  left: 0;
   position: absolute;
+  right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
