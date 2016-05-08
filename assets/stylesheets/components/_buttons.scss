@@ -9,6 +9,7 @@
   letter-spacing: 1px;
   outline: 0;
   padding: .8rem;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: background $cubic-bezier $duration;
@@ -37,10 +38,24 @@
   }
 }
 
-.button--empty {
+.button--add {
   background: none;
   border: 2px dashed lighten($gray, 20%);
   color: $gray;
   cursor: pointer;
-  text-align: center;
+  display: inline-block;
+  transition: $duration $cubic-bezier;
+  width: auto;
+
+  &:before {
+    content: "\f067";
+    font-family: "FontAwesome";
+    font-weight: $regular;
+    margin-right: 7px;
+  }
+
+  &:hover {
+    border: 2px dashed lighten($gray, 10%);
+    color: darken($gray, 5%);
+  }
 }
