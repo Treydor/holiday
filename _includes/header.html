@@ -25,16 +25,16 @@
     <div class="container">
       <ul class="nav-list">
         <li class="nav-list__item">
-          <a class="nav-list__link" href="{{ site.baseurl }}/packages/">Packages</a>
+          <a class="nav-list__link {% if page.group == 'packages' %}nav-list__link--current{% endif %}" href="{{ site.baseurl }}/">Packages</a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link" href="{{ site.baseurl }}/hotels/">Hotels</a>
+          <a class="nav-list__link {% if page.group == 'hotels' %}nav-list__link--current{% endif %}" href="{{ site.baseurl }}/hotels/">Hotels</a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link" href="{{ site.baseurl }}/flights/">Flights</a>
+          <a class="nav-list__link {% if page.group == 'flights' %}nav-list__link--current{% endif %}" href="{{ site.baseurl }}/flights/">Flights</a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link" href="{{ site.baseurl }}/cars/">Cars</a>
+          <a class="nav-list__link {% if page.group == 'cars' %}nav-list__link--current{% endif %}" href="{{ site.baseurl }}/cars/">Cars</a>
         </li>
       </ul>
     </div>
