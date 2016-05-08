@@ -45,6 +45,18 @@ img {
 .section__header {
   margin-bottom: 1.5rem;
 
+  .module {
+    margin-bottom: 1.5rem;
+
+    @media #{$medium} {
+      margin-bottom: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   p {
     margin: 0;
   }
