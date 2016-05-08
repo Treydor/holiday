@@ -223,6 +223,31 @@
 
 /*------ Review ------*/
 
+.review {
+  font-size: .9rem;
+
+  @media #{$large} {
+    font-size: 1rem;
+  }
+
+  .module--6 {
+    margin-bottom: 1.5rem;
+
+    @media #{$medium} {
+      width: 47.5%;
+      margin-left: 5%;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .review__summary {
   background: $white;
   border: 1px solid $border-light;
@@ -239,6 +264,6 @@
   }
 
   .button {
-    text-align: center;
+    margin-top: 1.5rem;
   }
 }
