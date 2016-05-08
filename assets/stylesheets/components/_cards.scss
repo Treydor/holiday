@@ -47,7 +47,7 @@
   overflow: hidden;
   position: relative;
   text-decoration: none;
-  transition: transform $cubic-bezier $duration;
+  transition: border $cubic-bezier $duration;
 
   &:last-of-type {
     margin-bottom: 0;
