@@ -58,7 +58,7 @@
     text-decoration: none;
   }
 
-  p {
+  .row {
     margin: 0;
   }
 }
@@ -148,6 +148,8 @@
 }
 
 .card__price {
+  font-size: 2rem;
+  font-weight: $regular;
   margin: 0;
 }
 
