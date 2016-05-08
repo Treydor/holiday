@@ -4,6 +4,9 @@ title: Holiday
 description: A travel project
 baseurl: "/holiday"
 
+# Pages
+include: ['_pages']
+
 # Build settings
 highlighter: rouge
 markdown: kramdown
