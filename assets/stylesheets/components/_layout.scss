@@ -37,33 +37,18 @@ img {
 }
 
 .container--narrow {
-  max-width: 600px
+  max-width: 600px;
+  position: relative;
 }
+
 
 /*------ Section ------*/
 
 .section__header {
   margin-bottom: 1.5rem;
 
-  .module {
-    margin-bottom: 1.5rem;
-
-    @media #{$medium} {
-      margin-bottom: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  p {
+  h2 {
+    font-weight: $regular;
     margin: 0;
   }
-}
-
-.section__title {
-  font-size: 1.7rem;
-  font-weight: $regular;
-  margin-bottom: 1.5rem;
 }
