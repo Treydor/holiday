@@ -10,16 +10,16 @@ group: flights
 <section class="results">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title">Displaying roundtrip flights from MKE to MCO</h2>
       <div class="row">
-        <div class="filter">
-          <div class="filter__toggle">Filter Results</div>
-          <div class="filter__box">
-            {% include filter-list/flights.html %}
-          </div>
+        <h2>Displaying roundtrip flights from MKE to MCO</h2>
+      </div>
+      <div class="row">
+        <div class="filter__toggle">Filter Results</div>
+        <div class="filter__box">
+          {% include filter-list/flights.html %}
         </div>
-        <select class="select--fixed-right">
-          <option selected="selected">Sort</option>
+        <select>
+          <option selected>Sort results</option>
           <option>Price (Lowest first)</option>
           <option>Price (Highest first)</option>
           <option>Departure (Earliest first)</option>

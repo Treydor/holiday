@@ -9,18 +9,20 @@ group: packages
 
 <section class="review">
   <div class="container">
-    <h2 class="section__title">Your trip to Orlando, FL</h2>
+    <div class="section__header">
+      <h2>Your trip to Orlando, FL</h2>
+    </div>
     <div class="row">
       <div class="module module--6">
         <h3 class="review__title">Hotel</h3>
-        <div class="review__group">
+        <div class="row">
           <p>Grand Villa Hotel and Suites</p>
           <p>1 N Main St, Orlando, FL, 32830 United States</p>
           <p>(800) 559-5559</p>
           <p>Deluxe, 1 King Bed</p>
         </div>
         <h3 class="review__title">Flight</h3>
-        <div class="review__group">
+        <div class="row">
           <p>Departure</p>
           <p>Milwaukee, WI (MKE) to Orlando, FL (MCO)</p>
           <p>1:30pm - 3:25pm</p>
@@ -28,7 +30,7 @@ group: packages
           <p>Total travel time: 2h 55m</p>
           <p>Nonstop</p>
         </div>
-        <div class="review__group">
+        <div class="row">
           <p>Return</p>
           <p>Orlando, FL (MCO) to Milwaukee, WI (MKE)<p>
           <p>1:30pm - 3:25pm</p>
@@ -38,29 +40,25 @@ group: packages
         </div>
       </div>
       <div class="module module--6">
-        <h3 class="review__title">Trip summary</h3>
+        <h3>Trip summary</h3>
         <div class="review__summary">
-          <div class="review__group">
-            <p>2 Tickets: 2 Adults</p>
-            <p>Grand Villa Hotel and Suites</p>
+          <div class="row">
+            <h3>Milwaukee, WI to Orlando, FL</h3>
             <p>Saturday, July 9 to Monday, July 18</p>
-            <p>1 Room: 9 nights</p>
+            <p>2 tickets, 2 adults</p>
+            <p>Grand Villa Hotel and Suites, Orlando FL</p>
+            <p>1 room, 9 nights</p>
+            <p>Price per adult: $1410.00 (2 adults)</p>
           </div>
-          <div class="review__group">
-            <p>Price per guest</p>
-            <p>Traveler 1: Adult $1410.00</p>
-            <p>Traveler 2: Adult $1410.00</p>
+          <div class="row">
+            <h2 class="card__price">$2,820.00</h2>
+            <p class="subtitle">Total USD</p>
           </div>
-          <div class="review__group">
-            <h2 class="card__total">$2,820.00</h2>
-            <p><strong>Total</strong></p>
-            <span class="subtitle">Rates are quoted in US dollars</p>
-          </div>
-          <div class="review__group">
+          <div class="row">
             <p>Holiday offers a best price guarantee, congratulations! You're getting the lowest possible rate. We guarantee it.</p>
           </div>
-          <div class="review__group">
-            <a class="button button--primary add-margin-top" href="{{ site.baseurl }}/packages/checkout">Continue to payment</a>
+          <div class="row">
+            <a class="button button--primary" href="{{ site.baseurl }}/packages/checkout">Continue to payment</a>
           </div>
         </div>
       </div>

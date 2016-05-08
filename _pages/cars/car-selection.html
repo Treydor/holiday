@@ -10,16 +10,16 @@ group: cars
 <section class="results">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title">Displaying rental cars in Orlando, FL</h2>
       <div class="row">
-        <div class="filter">
-          <div class="filter__toggle">Filter Results</div>
-          <div class="filter__box">
-            {% include filter-list/cars.html %}
-          </div>
+        <h2>Displaying rental cars in Orlando, FL</h2>
+      </div>
+      <div class="row">
+        <div class="filter__toggle">Filter Results</div>
+        <div class="filter__box">
+          {% include filter-list/cars.html %}
         </div>
         <select class="select--fixed-right">
-          <option selected="selected">Sort</option>
+          <option selected>Sort results</option>
           <option>Daily price (Lowest first)</option>
           <option>Daily price (Highest first)</option>
           <option>Rental car company</option>
