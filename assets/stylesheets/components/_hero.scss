@@ -1,10 +1,11 @@
 /*------ Hero ------*/
 
 .hero {
-  background: $light-gray;
+  background: darken($light-gray, 3%);
   background: url("../../assets/images/hero/hero.jpg") no-repeat;
   background-position: 50% 35%;
   background-size: cover;
+  border-bottom: 1px solid $border-light;
   position: relative;
 }
 
