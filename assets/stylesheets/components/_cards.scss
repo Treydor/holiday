@@ -6,7 +6,7 @@
 }
 
 .card-list__item {
-  margin-bottom: 1.5rem;
+  position: relative;
 
   @media #{$medium} {
     float: left;
@@ -19,7 +19,6 @@
   }
 
   @media #{$large} {
-    margin-bottom: 2rem;
     width: 31.33%;
 
     &:nth-of-type(2n+1) {
@@ -30,10 +29,6 @@
       margin-left: 0;
     }
   }
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 }
 
 /*------ Card ------*/
@@ -43,48 +38,48 @@
   border: 1px solid $border-light;
   border-radius: $border-radius;
   display: block;
+  font-size: .9rem;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  position: relative;
   text-decoration: none;
   transition: border $cubic-bezier $duration;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  &:hover {
-    border: 1px solid darken($border-light, 5%);
-    text-decoration: none;
-  }
-
-  .row {
-    margin: 0;
-  }
 }
 
 /*------ Card Structure ------*/
 
 .card__section {
-  @extend %clearfix;
   border-bottom: 1px solid $border-light;
-  padding: .5rem;
+  height: 200px;
+  padding: 1rem;
 
-  &:last-of-type {
+  @media #{$large} {
     border-bottom: 0;
+    border-left: 1px solid $border-light;
+    float: left;
+    width: 25%;
+
+    &:first-of-type {
+      border-left: 0;
+    }
   }
 }
 
-.card__photo {
-  background-size: cover;
-  height: 225px;
-  position: relative;
+.card__section--large {
+  @media #{$large} {
+    width: 50%;
+  }
+}
 
-  img {
-    @include complete-center;
-    max-height: 185px;
-    max-width: 280px;
-    width: 90%;
+.card__section--center {
+  text-align: center;
+}
+
+.card__row {
+  @extend %clearfix;
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -92,10 +87,9 @@
 
 .card__title {
   @include ellipsis;
+  display: inline-block;
   font-size: 1rem;
-  font-weight: $bold;
-  margin: 0;
-  text-align: center;
+  margin-bottom: 0;
 }
 
 .card__special {
@@ -112,34 +106,27 @@
   z-index: 3;
 }
 
-.card__name {
-  display: inline-block;
-  font-size: 1rem;
+.card__price {
+  font-size: 2rem;
+  font-weight: $regular;
+  margin-bottom: .5rem;
+}
+
+.card__label {
+  color: $gray;
+  font-size: .75rem;
   font-weight: $bold;
-  margin: 0 .5rem .75rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.card__class {
-  @extend %clearfix;
-  @include clean-list;
-  display: inline-block;
+/*------ Card List ------*/
 
-  li {
-    color: $gray;
-    display: inline-block;
-    font-size: 1rem;
-  }
-
-  .empty {
-    color: darken($light-gray, 8%);
-  }
-}
-
-.card__info {
+.card__list {
   @include clean-list;
 
   li {
-    margin-bottom: .75rem;
+    margin-bottom: 1rem;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -147,101 +134,79 @@
   }
 }
 
-.card__price {
-  font-size: 2rem;
-  font-weight: $regular;
-  margin: 0;
-}
+.card__list--class {
+  @extend %clearfix;
+  display: inline-block;
 
-.card__sub-text {
-  color: $gray;
-  font-size: .7rem;
-  font-weight: $bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/*------ Card small ------*/
-
-.card--small {
-  text-align: center;
-
-  .card__section {
-    padding: 1rem;
+  @media #{$medium} {
+    float: right;
   }
 
-  .card__photo {
-    border-bottom: 1px solid $border-light;
-  }
-}
-
-/*------ Card large ------*/
-
-.card--large {
-  font-size: .85rem;
-
-  .card__section {
-
-    @media #{$large} {
-      float: left;
-    }
-  }
-
-  .card__photo {
-    border-bottom: 1px solid $border-light;
-    height: 188px;
+  li {
+    color: $gray;
+    float: left;
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-left: .1rem;
 
     @media #{$medium} {
-      background-size: cover;
-      width: 100%;
-    }
 
-    @media #{$large} {
-      border-bottom: 0;
-      border-right: 1px solid $border-light;
-      width: 25%;
     }
+  }
+
+  .empty {
+    color: darken($light-gray, 10%);
   }
 }
 
-.card__section--body {
-  border-bottom: 1px solid $border-light;
-  padding: 1rem;
+/*------ Card Small ------*/
 
-  @media #{$large} {
-    border-bottom: 0;
-    width: 50%;
-  }
-}
-
-.card__section--action {
-  padding: 1rem;
+.card--small {
+  border: 1px solid $border-light;
   text-align: center;
 
-  @media #{$large} {
-    border-left: 1px solid $border-light;
-    width: 25%;
+  .card__section {
+    @extend %clearfix;
+    border: 0;
+    border-bottom: 1px solid $border-light;
+    height: auto;
+    width: 100%;
+  }
+
+  .card__section--photo {
+    height: 200px;
   }
 }
 
-.card__section--wide {
-  padding: 0;
+/*------ Card Flights ------*/
 
-  @media #{$large} {
-    border-bottom: 0;
-    width: 75%;
+.card--flights {
+
+  .card__section {
+    height: auto;
+    padding: 0;
   }
 
-  .row {
+  .card__section--extra-large {
+    @media #{$large} {
+      border: 0;
+      width: 75%;
+    }
+  }
+
+  .card__row {
     border-bottom: 1px solid $border-light;
-    padding: 1.2rem 1rem;
+    margin: 0;
+    padding: 1rem;
 
     &:last-of-type {
       border-bottom: 0;
     }
+  }
 
-    @media #{$large} {
-      padding: 1.65rem;
+  .card__row--padded {
+    @media #{$medium} {
+      padding: 1.7rem 1rem;
     }
   }
 
@@ -253,7 +218,7 @@
     }
 
     @media #{$medium} {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -306,19 +271,17 @@
 
 .hotel3 {
   background: url("../../assets/images/cards/hotels/hotel3.jpg") center no-repeat;
-  background-position: 50% 70%;
+  background-position: 50% 45%;
   background-size: cover;
 }
 
 .hotel4 {
   background: url("../../assets/images/cards/hotels/hotel4.jpg") center no-repeat;
-  background-position: 50% 70%;
   background-size: cover;
 }
 
 .hotel5 {
   background: url("../../assets/images/cards/hotels/hotel5.jpg") center no-repeat;
-  background-position: 50% 70%;
   background-size: cover;
 }
 
@@ -356,6 +319,27 @@
 
 /*------ Car photos ------*/
 
-.car {
-  background: url("../../assets/images/cards/car.jpg") center no-repeat;
+.economy {
+  background: url("../../assets/images/cards/cars/economy.jpg") center no-repeat;
+  background-size: 80%;
+}
+
+.compact {
+  background: url("../../assets/images/cards/cars/compact.jpg") center no-repeat;
+  background-size: 80%;
+}
+
+.standard {
+  background: url("../../assets/images/cards/cars/standard.jpg") center no-repeat;
+  background-size: 80%;
+}
+
+.fullsize {
+  background: url("../../assets/images/cards/cars/fullsize.jpg") center no-repeat;
+  background-size: 80%;
+}
+
+.premium {
+  background: url("../../assets/images/cards/cars/premium.jpg") center no-repeat;
+  background-size: 80%;
 }
