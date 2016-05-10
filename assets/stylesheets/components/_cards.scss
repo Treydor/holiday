@@ -258,49 +258,104 @@
   }
 }
 
-/*------ Card photos ------*/
+/*------ Package photos ------*/
 
 .new-york {
-  background: url("../../assets/images/cards/newyork.jpg") 50% 0 no-repeat;
+  background: url("../../assets/images/cards/destinations/newyork.jpg") 50% 0 no-repeat;
   background-size: cover;
 }
 
 .san-fran {
-  background: url("../../assets/images/cards/sanfran.jpg") center no-repeat;
+  background: url("../../assets/images/cards/destinations/sanfran.jpg") center no-repeat;
   background-size: cover;
 }
 
 .chicago {
-  background: url("../../assets/images/cards/chicago.jpg") center no-repeat;
+  background: url("../../assets/images/cards/destinations/chicago.jpg") center no-repeat;
   background-size: cover;
 }
 
 .nassau {
-  background: url("../../assets/images/cards/nassau.jpg") center no-repeat;
+  background: url("../../assets/images/cards/destinations/nassau.jpg") center no-repeat;
   background-size: cover;
 }
 
 .london {
-  background: url("../../assets/images/cards/london.jpg") center no-repeat;
+  background: url("../../assets/images/cards/destinations/london.jpg") center no-repeat;
   background-size: cover;
 }
 
 .berlin {
-  background: url("../../assets/images/cards/berlin.jpg") center no-repeat;
+  background: url("../../assets/images/cards/destinations/berlin.jpg") center no-repeat;
   background-size: cover;
 }
 
-.car {
-  background: url("../../assets/images/cards/car.jpg") center no-repeat;
-}
+/*------ Hotel photos ------*/
 
-.hotel {
-  background: url("../../assets/images/cards/hotel.jpg") center no-repeat;
+.hotel1 {
+  background: url("../../assets/images/cards/hotels/hotel1.jpg") center no-repeat;
   background-position: 50% 70%;
   background-size: cover;
 }
 
-.hotel-room {
-  background: url("../../assets/images/cards/hotel-room.jpg") center no-repeat;
+.hotel2 {
+  background: url("../../assets/images/cards/hotels/hotel2.jpg") center no-repeat;
+  background-position: 50% 70%;
   background-size: cover;
+}
+
+.hotel3 {
+  background: url("../../assets/images/cards/hotels/hotel3.jpg") center no-repeat;
+  background-position: 50% 70%;
+  background-size: cover;
+}
+
+.hotel4 {
+  background: url("../../assets/images/cards/hotels/hotel4.jpg") center no-repeat;
+  background-position: 50% 70%;
+  background-size: cover;
+}
+
+.hotel5 {
+  background: url("../../assets/images/cards/hotels/hotel5.jpg") center no-repeat;
+  background-position: 50% 70%;
+  background-size: cover;
+}
+
+/*------ Room photos ------*/
+
+.room1 {
+  background: url("../../assets/images/cards/room-type/room1.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.room2 {
+  background: url("../../assets/images/cards/room-type/room2.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.room3 {
+  background: url("../../assets/images/cards/room-type/room3.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.room4 {
+  background: url("../../assets/images/cards/room-type/room4.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.room5 {
+  background: url("../../assets/images/cards/room-type/room5.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.room6 {
+  background: url("../../assets/images/cards/room-type/room6.jpg") center no-repeat;
+  background-size: cover;
+}
+
+/*------ Car photos ------*/
+
+.car {
+  background: url("../../assets/images/cards/car.jpg") center no-repeat;
 }
