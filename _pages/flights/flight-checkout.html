@@ -1,0 +1,104 @@
+---
+layout: default
+title: "Holiday - Checkout"
+permalink: /flights/checkout/
+group: flights
+---
+
+{% include search/flights/criteria3.html %}
+
+<section class="payment">
+  <div class="container container--narrow">
+    <div class="section__header">
+      <h2>Enter payment information</h2>
+    </div>
+    <div class="form-table">
+        <div class="row">
+          <div class="module module--6-fixed">
+            <label>First name</label>
+            <input type="text">
+          </div>
+          <div class="module module--6-fixed">
+            <label>Last name</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="row">
+          <label>Billing address</label>
+          <input type="text">
+        </div>
+        <div class="row">
+          <div class="module module--6-fixed">
+            <label>City</label>
+            <input type="text">
+          </div>
+          <div class="module module--6-fixed">
+            <label>Zip code</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="row">
+          <div class="module module--6">
+            <label>Card type</label>
+            <select>
+              <option disabled selected>Please select</option>
+              <option>American Express</option>
+              <option>Discover</option>
+              <option>Mastercard</option>
+              <option>Visa</option>
+            </select>
+          </div>
+          <div class="module module--6">
+            <label>Card number</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="row">
+          <div class="module module--6">
+            <label>Expiration month</label>
+            <select>
+              <option disabled selected>Please select</option>
+              <option>01 - January</option>
+              <option>02 - February</option>
+              <option>03 - March</option>
+              <option>04 - April</option>
+              <option>05 - May</option>
+              <option>06 - June</option>
+              <option>07 - July</option>
+              <option>08 - August</option>
+              <option>09 - September</option>
+              <option>10 - October</option>
+              <option>11 - November</option>
+              <option>12 - December</option>
+            </select>
+          </div>
+          <div class="module module--6">
+            <label>Expiration year</label>
+            <select>
+              <option disabled selected>Please select</option>
+              <option>2016</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+              <option>2023</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="module module--6">
+            <label>Card security code</label>
+            <input type="text">
+          </div>
+          <div class="module module--6">
+          </div>
+        </div>
+        <div class="row">
+          <button class="button button--primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
