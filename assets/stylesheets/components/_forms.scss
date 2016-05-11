@@ -10,33 +10,38 @@ input[type="url"],
 input[type="time"],
 textarea {
   -webkit-appearance: none;
+  background: $white;
   border: 1px solid $border-light;
   border-radius: $border-radius;
   color: $dark-gray;
   font-size: .9rem;
+  height: 40px;
+  line-height: normal;
   outline: none;
-  padding: .7rem;
-  transition: background $cubic-bezier $duration;
+  padding: .65rem .5rem;
+  transition: $cubic-bezier $duration;
   width: 100%;
 
   &:focus {
-    background: lighten($light-gray, 1%);
+    border: 1px solid darken($border-light, 12%);
   }
 }
 
-::-webkit-input-placeholder {
+/*------ Input Placeholder Text ------*/
+
+input::-webkit-input-placeholder {
   color: $gray;
 }
 
-:-moz-placeholder {
+input:-moz-placeholder {
   color: $gray;
 }
 
-::-moz-placeholder {
+input::-moz-placeholder {
   color: $gray;
 }
 
-:-ms-input-placeholder {
+input:-ms-input-placeholder {
   color: $gray;
 }
 
@@ -54,12 +59,14 @@ select {
   cursor: pointer;
   font-size: .9rem;
   line-height: normal;
+  height: 40px;
   outline: 0;
-  padding: .7rem;
+  padding: .65rem .5rem;
+  transition: border $cubic-bezier $duration;
   width: 100%;
 
-  @media #{$medium} {
-    padding: .65rem .7rem;
+  &:focus {
+    border: 1px solid darken($border-light, 12%);
   }
 }
 
@@ -78,6 +85,30 @@ select:-moz-focusring {
     float: right;
     width: 230px;
   }
+}
+
+/*------ HTML5 Date input overrides ------*/
+
+input[type=date]::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type=date]::-webkit-clear-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url("../../assets/images/down-arrow.svg") no-repeat;
+  background-position: center right 3px;
+  background-size: auto 6px;
+  color:rgba(255,255,255,0);
+  cursor: pointer;
 }
 
 /*------ Labels  ------*/
@@ -164,10 +195,10 @@ label {
 .flight-search-tabs {
   @extend %clearfix;
   @include clean-list;
-  @include ellipsis;
   border: 1px solid $border-light;
   border-radius: $border-radius;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  overflow: hidden;
 
   @media #{$medium} {
     margin-bottom: 0;
@@ -182,10 +213,10 @@ label {
   font-size: .7rem;
   font-weight: $bold;
   letter-spacing: .5px;
-  padding: .7rem 0;
+  padding: .6rem 0;
   text-align: center;
   text-transform: uppercase;
-  transition: background $duration $cubic-bezier;
+  transition: $duration $cubic-bezier;
   width: 33.33%;
 
   &:first-of-type {
