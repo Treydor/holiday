@@ -7,7 +7,7 @@ Holiday is a static travel website that specializes in bundled packages as well 
 
 ##### Clone the repository
 ```
-HTTPS: git@github.com:noaharogers/holiday.git
+git clone git@github.com:noaharogers/holiday.git
 ```
 
 ##### Change directory to Holiday
