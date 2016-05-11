@@ -43,6 +43,10 @@
   overflow: hidden;
   text-decoration: none;
   transition: border $cubic-bezier $duration;
+
+  &:hover {
+    border: 1px solid darken($border-light, 4%);
+  }
 }
 
 /*------ Card Structure ------*/
